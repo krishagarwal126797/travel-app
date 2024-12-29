@@ -1,0 +1,213 @@
+/* App.css */
+
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: black;
+    color: #fff; /* White text for contrast against black background */
+    margin: 0;
+    padding: 0;
+}
+
+/* Hero Section */
+.hero {
+    background: url('https://via.placeholder.com/1920x800') no-repeat center center;
+    background-size: cover;
+    padding: 80px 0;
+    color: #fff;
+    margin-left: 200px; /* Adjust content to fit next to navbar */
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+.hero .btn {
+    font-size: 1.1rem;
+    padding: 12px 30px;
+    border-radius: 25px;
+    margin: 0 10px;
+}
+
+.hero .btn-primary {
+    background-color: #007bff;
+    border: none;
+}
+
+.hero .btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.hero .btn-secondary {
+    background-color: #6c757d;
+    border: none;
+}
+
+.hero .btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+/* Featured Tours */
+.card {
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #333; /* Dark card background */
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #bbb;
+}
+
+.card .btn-primary {
+    background-color: #007bff;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 20px;
+}
+
+.card .btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* How It Works Section */
+.row .col-md-4 {
+    margin-bottom: 30px;
+}
+
+.row .col-md-4 img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.row .col-md-4 h5 {
+    font-size: 1.25rem;
+    margin-top: 20px;
+}
+
+.row .col-md-4 p {
+    font-size: 1rem;
+    color: #bbb;
+}
+
+/* Testimonials */
+.testimonial {
+    background-color: #1e1e1e;
+    padding: 60px 0;
+}
+
+.testimonial blockquote {
+    background-color: #333;
+    border-left: 5px solid #007bff;
+    padding: 15px 25px;
+    font-size: 1.1rem;
+    color: #bbb;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial blockquote footer {
+    font-size: 1rem;
+    color: #007bff;
+    font-weight: bold;
+}
+
+/* Footer */
+.footer {
+    background-color: #1e1e1e;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.footer p {
+    margin: 10px 0;
+}
+
+.footer a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+/* home.css */
+
+/* Navbar */
+.navbar {
+    background-color: #343a40; /* Dark background for the navbar */
+    box-shadow: none;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff; /* White color for brand */
+}
+
+.navbar-nav {
+    padding-left: 0;
+    display: flex;
+    align-items: center; /* Align items horizontally */
+}
+
+.navbar-nav .nav-item {
+    margin-left: 20px; /* Space between items */
+}
+
+.navbar-nav .nav-link {
+    font-size: 1rem;
+    color: #bbb;
+    text-align: center;
+    padding: 8px 20px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #007bff;
+}
+
+.navbar-nav .btn {
+    font-size: 1rem;
+    border-radius: 20px;
+    padding: 8px 20px;
+}
+
+.navbar-nav .btn-primary {
+    background-color: #007bff;
+    border: none;
+}
+
+.navbar-nav .btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Other sections remain unchanged */
