@@ -1,35 +1,319 @@
+/* src/views/LoginPage.css */
+
 .login-container {
-  max-width: 400px;
-  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background: url('/public/assets/login.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.login-content {
+  display: flex;
+  background: rgba(240, 240, 240, 0.9);
+  border-radius: 10px;
+  overflow: hidden;
+  width: 80%;
+  max-width: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  flex-direction: row;
+  transition: all 0.3s ease;
+}
+
+.login-image {
+  position: relative;
+  flex: 1;
+  background: url('/public/assets/login.jpg') no-repeat center center/cover;
+  min-height: 300px;
+  transition: height 0.3s ease;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 
-.login-container h2 {
+.centered-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  font-weight: 500;
+}
+.partnerlink{
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;
+  width:100%;
+}
+.centered-text .welcome-text,
+.centered-text .garage-text {
+  font-size: 3em;
+  padding: 0 10px;
+  margin: 0;
+}
+
+.image-overlay .lorem-text {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+}
+
+.login-form {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: padding 0.3s ease;
+}
+
+.login-form h3 {
   margin-bottom: 20px;
+  text-decoration: underline;
+  font-size: 3em;
 }
 
-.login-container input {
+.login-form input {
   width: 100%;
   padding: 10px;
-  margin: 10px 0;
+  margin-bottom: 20px;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 5px;
 }
 
-.login-container button {
+.login-form input:hover {
+  border: 1px solid black;
+}
+
+.login-form button {
   width: 100%;
   padding: 10px;
-  background-color: #4caf50;
+  background-color: black;
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 5px;
   cursor: pointer;
 }
 
-.login-container button:hover {
-  background-color: #45a049;
+.login-form button:hover {
+  background-color: #ff4433;
+
+}
+
+.form-icons {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.form-icons .icon {
+  width: 70px;
+  height: 70px;
+  background: black;
+  margin: 0 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5%;
+  color: white;
+  font-size: 24px;
+  transition: transform 0.3s;
+}
+
+.form-icons .icon.active {
+  background: #ff4433;
+  transform: scale(1.2);
+  color: black;
+}
+
+.login-form p {
+  margin-top: 20px;
+}
+
+.login-form a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-form a:hover {
+  text-decoration: underline;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1100px) {
+  .login-content {
+    flex-direction: column;
+    width: 80%;
+    height: auto;
+    align-items: center;
+  }
+
+  .login-image {
+    height: 200px;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .centered-text {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+  }
+
+  .centered-text .welcome-text,
+  .centered-text .garage-text {
+    font-size: 2em;
+    margin: 0;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+
+  .image-overlay .lorem-text {
+    font-size: 0.8em;
+    padding: 15px;
+  }
+
+  .login-form {
+    padding: 20px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .login-content {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
+
+  .login-image {
+    height: 200px;
+  }
+
+  .centered-text {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+  }
+
+  .centered-text .welcome-text,
+  .centered-text .garage-text {
+    font-size: 1.8em;
+  }
+
+  .image-overlay .lorem-text {
+    font-size: 0.7em;
+    padding: 10px;
+  }
+
+  .login-form {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-content {
+    width: 100%;
+    height: auto;
+  }
+
+  .login-form {
+    padding: 20px;
+  }
+
+  .login-form h3 {
+    font-size: 1.5em;
+  }
+
+  .centered-text {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+  }
+
+  .centered-text .welcome-text,
+  .centered-text .garage-text {
+    font-size: 1.5em;
+  }
+
+  .image-overlay .lorem-text {
+    font-size: 0.6em;
+    padding: 8px;
+  }
+
+  .login-form input, .login-form button {
+    padding: 8px;
+  }
+  .partnerlink{
+    width: 100%;
+   
+  }
+  .hover-effect{
+    font-size: 15px;
+  }
+  .register-link a{
+    font-size: 13px;
+  
+  }
+
+}
+
+.icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.icon-name {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #ffffff; /* Adjust color as needed */
+}
+
+.icon.active .icon-name {
+  font-weight: bold;
+}
+
+.hover-effect {
+
+  cursor: pointer;
+
+margin-left:10px;
+  color: black; /* Default color */
+}
+
+.hover-effect:hover {
+  color: red; /* Color on hover */
+}
+.register-link a:hover {
+  text-decoration: none;
+  color: red; /* Color on hover */
 }
