@@ -1,0 +1,51 @@
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.register-container.light {
+  background-color: #f0f4f8;
+  color: #333;
+}
+
+.register-container.dark {
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+.register-card {
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.register-card.light {
+  background-color: #fff;
+  color: #333;
+}
+
+.register-card.dark {
+  background-color: #333;
+  color: #fff;
+}
+
+.register-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.register-actions {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+button {
+  font-size: 16px;
+}
