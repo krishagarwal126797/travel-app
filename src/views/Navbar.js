@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import { Navbar, Nav, Button, Container } from "react-bootstrap";
-import { FaPlay, FaTag, FaInfoCircle, FaMoon, FaSun } from "react-icons/fa";
+import { FaPlay, FaTag, FaInfoCircle, FaMoon, FaSun,FaHome,FaCaretDown, FaMapMarkerAlt } from "react-icons/fa";
+import {  Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from "reactstrap";
 import "./Navbar.css";
 
 const NavbarComp = () => {
   const [darkMode, setDarkMode] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
 
+  const toggle = () => setDropdownOpen(!dropdownOpen);
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
     document.body.className = darkMode ? "light-mode" : "dark-mode";
@@ -30,17 +33,31 @@ const NavbarComp = () => {
         <Navbar.Collapse id="navbar-nav" className="justify-content-end">
           <Nav className={`nav-buttons ${darkMode ? "navbuttons-dark" : "navbuttons-light"}`}>
             <Button  className="nav-btn">
-              <FaPlay className="icon" />
-              Watch Film
-            </Button>
-            <Button  className="nav-btn">
-              <FaTag className="icon" />
-              Pricing
+              <FaHome className="icon" />
+              Home
             </Button>
             <Button  className="nav-btn">
               <FaInfoCircle className="icon" />
               About Us
             </Button>
+            <div className="nav-btn-container">
+      <div className="nav-btn">
+        <FaMapMarkerAlt className="icon me-2" />
+        Toures
+        <FaCaretDown 
+          className="dropdown-icon ms-2" 
+          onClick={toggle} 
+          style={{ cursor: "pointer" }}
+        />
+      </div>
+      <Dropdown isOpen={dropdownOpen} toggle={toggle} className="dropdown">
+        <DropdownMenu>
+          <DropdownItem href="#our-story">Our Story</DropdownItem>
+          <DropdownItem href="#team">Team</DropdownItem>
+          <DropdownItem href="#careers">Careers</DropdownItem>
+        </DropdownMenu>
+      </Dropdown>
+    </div>
           </Nav>
 
           {/* Dark Mode Toggle */}
