@@ -1,0 +1,51 @@
+/* Logo Styling */
+.logo {
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+}
+
+/* Dark Mode Styling */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.dark-mode .navbar {
+  background-color: #1e1e1e !important;
+  border-bottom: 1px solid #333;
+}
+
+body.dark-mode .btn-link {
+  color: #ffffff !important;
+}
+body .btn-link{
+  color: #1e1e1e;
+}
+
+
+body.dark-mode .btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+/* Button Styling */
+.btn-link {
+  color: #007bff !important;
+}
+
+.btn-primary {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  font-size: 1.2rem;
+  padding: 0.4rem;
+}
