@@ -1,135 +1,72 @@
 import React, { useState } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import { FaSun, FaMoon } from "react-icons/fa";
+import { Navbar, Nav, Button, Container } from "react-bootstrap";
+import { FaPlay, FaTag, FaInfoCircle, FaMoon, FaSun } from "react-icons/fa";
 import "./Navbar.css";
 
-const Navbar = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+const NavbarComp = () => {
+  const [darkMode, setDarkMode] = useState(false);
 
-  const toggleTheme = () => {
-    setIsDarkMode(!isDarkMode);
-    document.body.classList.toggle("dark-mode", !isDarkMode);
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+    document.body.className = darkMode ? "light-mode" : "dark-mode";
   };
 
   return (
-    <nav
-      className={`navbar navbar-expand-lg ${
-        isDarkMode ? "navbar-dark bg-dark" : "navbar-light bg-light"
-      }`}
+    <Navbar
+      expand="lg"
+      className={`custom-navbar ${darkMode ? "navbar-dark" : "navbar-light"}`}
     >
-      <div className="container-fluid">
-        {/* Brand Logo */}
-        <a className="navbar-brand" href="#">
-          <img
-            src="https://via.placeholder.com/40" // Replace with the actual logo URL
-            alt="Logo"
-            className="logo"
-          />
-          <strong>vulpo</strong>
-        </a>
+      <Container>
+        {/* Logo Section */}
+        <Navbar.Brand href="#" className="brand-section">
+          <div className="brand-icon"><img src="/assets/img/travel-tinder.png" style={{width:'50px',height:'50px'}}/></div>
+          <span className={`brand-name ${darkMode ? "brandname-dark" : "brandname-light"}`}>Travel Tinder</span>
+        </Navbar.Brand>
 
-        {/* Mobile Menu Toggle */}
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
+        {/* Responsive Toggle */}
+        <Navbar.Toggle aria-controls="navbar-nav" />
 
         {/* Navigation Links */}
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            <li className="nav-item dropdown">
-              <a
-                className="nav-link dropdown-toggle"
-                href="#"
-                id="featuresDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Features
-              </a>
-              <ul className="dropdown-menu" aria-labelledby="featuresDropdown">
-                <li>
-                  <a className="dropdown-item" href="#">
-                    Feature 1
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="#">
-                    Feature 2
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li className="nav-item dropdown">
-              <a
-                className="nav-link dropdown-toggle"
-                href="#"
-                id="useCasesDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Use Cases
-              </a>
-              <ul className="dropdown-menu" aria-labelledby="useCasesDropdown">
-                <li>
-                  <a className="dropdown-item" href="#">
-                    Use Case 1
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="#">
-                    Use Case 2
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                Prices
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                Customers
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                About Us
-              </a>
-            </li>
-          </ul>
+        <Navbar.Collapse id="navbar-nav" className="justify-content-end">
+          <Nav className={`nav-buttons ${darkMode ? "navbuttons-dark" : "navbuttons-light"}`}>
+            <Button  className="nav-btn">
+              <FaPlay className="icon" />
+              Watch Film
+            </Button>
+            <Button  className="nav-btn">
+              <FaTag className="icon" />
+              Pricing
+            </Button>
+            <Button  className="nav-btn">
+              <FaInfoCircle className="icon" />
+              About Us
+            </Button>
+          </Nav>
 
-          {/* Action Buttons */}
-          <div className="d-flex align-items-center">
-            <button
-              className={`btn me-3 theme-toggle ${
-                isDarkMode ? "btn-light" : "btn-dark"
-              }`}
-              onClick={toggleTheme}
-            >
-              {isDarkMode ? <FaSun /> : <FaMoon />}
-            </button>
-            <a href="#" className="btn btn-link text-decoration-none">
-              Log In
-            </a>
-            <a href="#" className="btn btn-primary rounded-pill">
-              Get Started
-            </a>
-          </div>
-        </div>
-      </div>
-    </nav>
+          {/* Dark Mode Toggle */}
+          <Button
+            onClick={toggleDarkMode}
+            className="dark-mode-toggle ms-3"
+            variant={darkMode ? "light" : "dark"}
+          >
+            {darkMode ? <FaSun /> : <FaMoon />}
+          </Button>
+
+          {/* Login Button */}
+          <Nav>
+            <Button variant="dark" className="login-btn">
+              Login
+            </Button>
+          </Nav>
+          <Nav>
+            <Button variant="dark" className="signup-btn">
+              Sign up
+            </Button>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 };
 
-export default Navbar;
+export default NavbarComp;

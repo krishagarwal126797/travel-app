@@ -1,11 +1,11 @@
 import React from 'react';
 import './home.css';
-import Navbar from './Navbar';
+import NavbarComp from './Navbar';
 const Home = () => {
   return (
     <div>
       {/* Header */}
-     <Navbar/>
+     <NavbarComp/>
 
       {/* Hero Section */}
       <div className="hero text-center text-white">
