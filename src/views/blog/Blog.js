@@ -1,7 +1,7 @@
 import React from 'react';
-import './App.css'; // Assuming styles.css is renamed to App.css for consistency
+import './Blog.css'; // Assuming styles.css is renamed to App.css for consistency
 
-function App() {
+function Blog() {
   return (
     <div>
       {/* Navbar */}
@@ -27,12 +27,12 @@ function App() {
         <h2>Featured Blogs</h2>
         <div className="carousel">
           {[
-            { src: 'blog1.jpg', title: 'Top 10 Travel Destinations', desc: 'Explore the most beautiful places in the world.' },
-            { src: 'blog7.webp', title: 'Tips for Budget Travelers', desc: 'How to travel without breaking the bank.' },
-            { src: 'blog3.avif', title: 'Top 10 Travel Destinations', desc: 'Explore the most beautiful places in the world.' },
-            { src: 'blog4.avif', title: 'Tips for Budget Travelers', desc: 'How to travel without breaking the bank.' },
-            { src: 'blog5.avif', title: 'Top 10 Travel Destinations', desc: 'Explore the most beautiful places in the world.' },
-            { src: 'slide2.jpg', title: 'Tips for Budget Travelers', desc: 'How to travel without breaking the bank.' },
+            { src: '/assets/img/blog1.jpg', title: 'Top 10 Travel Destinations', desc: 'Explore the most beautiful places in the world.' },
+            { src: '/assets/img/blog1.jpg', title: 'Tips for Budget Travelers', desc: 'How to travel without breaking the bank.' },
+            { src: '/assets/img/blog3.avif', title: 'Top 10 Travel Destinations', desc: 'Explore the most beautiful places in the world.' },
+            { src: '/assets/img/blog4.avif', title: 'Tips for Budget Travelers', desc: 'How to travel without breaking the bank.' },
+            { src: '/assets/img/blog5.avif', title: 'Top 10 Travel Destinations', desc: 'Explore the most beautiful places in the world.' },
+            { src: '/assets/img/slide2.jpg', title: 'Tips for Budget Travelers', desc: 'How to travel without breaking the bank.' },
           ].map((slide, index) => (
             <div className="slide" key={index}>
               <img src={slide.src} alt={slide.title} />
@@ -50,11 +50,11 @@ function App() {
         <h2>Recent Blogs</h2>
         <div className="blog-list">
           {[
-            { src: 'blog6.avif', title: 'Hidden Gems of Europe', desc: 'Discover lesser-known yet stunning places in Europe.', link: 'blog1.html' },
-            { src: 'blog2.jpg', title: 'Adventure in the Wild', desc: 'Unforgettable wilderness experiences.', link: 'blog2.html' },
-            { src: 'blog8.webp', title: 'Adventure in the Wild', desc: 'Unforgettable wilderness experiences.', link: 'blog2.html' },
-            { src: 'blog1.jpg', title: 'Adventure in the Wild', desc: 'Unforgettable wilderness experiences.', link: 'blog2.html' },
-            { src: 'blog3.avif', title: 'Adventure in the Wild', desc: 'Unforgettable wilderness experiences.', link: 'blog2.html' },
+            { src: '/assets/img/blog6.avif', title: 'Hidden Gems of Europe', desc: 'Discover lesser-known yet stunning places in Europe.', link: 'blog1.html' },
+            { src: '/assets/img/blog2.jpg', title: 'Adventure in the Wild', desc: 'Unforgettable wilderness experiences.', link: 'blog2.html' },
+            { src: '/assets/img/blog8.webp', title: 'Adventure in the Wild', desc: 'Unforgettable wilderness experiences.', link: 'blog2.html' },
+            { src: '/assets/img/blog1.jpg', title: 'Adventure in the Wild', desc: 'Unforgettable wilderness experiences.', link: 'blog2.html' },
+            { src: '/assets/img/blog3.avif', title: 'Adventure in the Wild', desc: 'Unforgettable wilderness experiences.', link: 'blog2.html' },
           ].map((blog, index) => (
             <div className="blog-item" key={index}>
               <img src={blog.src} alt={blog.title} />
@@ -94,4 +94,4 @@ function App() {
   );
 }
 
-export default App;
+export default Blog;

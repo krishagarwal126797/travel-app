@@ -4,6 +4,9 @@ import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-d
 import Home from './views/Home';
 import Login from './views/Login';
 import Register from './views/Register';
+import Sidebar from './views/sidebar';
+import Blog from './views/blog/Blog';
+import Contact from './views/contact/ContactUs';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
@@ -35,6 +38,9 @@ root.render(
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
       <Route path="/" element={<Navigate to="/home" />} />
+      <Route path="/sidebar" element={<Sidebar />} />
+      <Route path="/blog" element={<Blog />} />
+      <Route path="/contact" element={<Contact />} />
     </Routes>
   </Router>
 );

@@ -1,0 +1,71 @@
+/* Sidebar.css */
+.sidebar {
+    width: 60px; 
+    height: 100vh;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 20px;
+    transition: width 0.3s ease; /* Smooth transition for width */
+  }
+  
+  .sidebar:hover {
+    width: 200px; /* Expanded width on hover */
+  }
+  
+  .sidebar-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar-item {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    transition: padding 0.3s ease;
+  }
+  
+  .sidebar-icon {
+    color: #007bff; /* Blue color for the icon */
+    font-size: 24px;
+    transition: color 0.3s ease;
+  }
+  
+  .sidebar-text {
+    color: #007bff; /* Same blue color for text */
+    margin-left: 15px;
+    font-size: 16px;
+    opacity: 0; /* Initially hidden text */
+    transition: opacity 0.3s ease; /* Smooth opacity transition */
+  }
+  
+  /* Show the text when the sidebar is expanded */
+  .sidebar:hover .sidebar-text {
+    opacity: 1;
+  }
+  
+  .sidebar-item:hover {
+    background-color: #444; /* Highlight item on hover */
+  }
+  
+  .sidebar-icon:hover {
+    color: #0056b3; /* Darker blue color on hover for the icon */
+  }
+  
+  .sidebar:hover .sidebar-item {
+    padding-left: 30px; /* Indent items when sidebar is expanded */
+  }
+  
+  .sidebar-item .sidebar-icon {
+    transition: transform 0.3s ease;
+  }
+  
+  .sidebar:hover .sidebar-item .sidebar-icon {
+    transform: scale(1.2); /* Slightly scale the icons on hover for emphasis */
+  }
+  

@@ -1,10 +1,12 @@
 import React from "react";
 import "./ContactUs.css";
+import { Navbar } from "react-bootstrap";
+import NavbarComp from "../Navbar";
 
-const App = () => {
+const Contact = () => {
   return (
     <div>
-      <Header />
+      <NavbarComp />
       <MainHeader />
       <ContactSection />
       <CTASection />
@@ -13,18 +15,18 @@ const App = () => {
   );
 };
 
-const Header = () => (
-  <header>
-    <nav>
-      <ul className="navbar">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-);
+// const Header = () => (
+//   // <header>
+//   //   <nav>
+//   //     <ul className="navbar">
+//   //       <li><a href="#home">Home</a></li>
+//   //       <li><a href="#about">About</a></li>
+//   //       <li><a href="#services">Services</a></li>
+//   //       <li><a href="#contact">Contact</a></li>
+//   //     </ul>
+//   //   </nav>
+//   // </header>
+// );
 
 const MainHeader = () => (
   <div className="header">
@@ -100,4 +102,4 @@ const Footer = () => (
   </footer>
 );
 
-export default App;
+export default Contact;
