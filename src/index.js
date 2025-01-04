@@ -7,6 +7,7 @@ import Register from './views/Register';
 import Sidebar from './views/sidebar';
 import Blog from './views/blog/Blog';
 import Contact from './views/contact/ContactUs';
+import Footer from './views/footer';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
@@ -41,6 +42,7 @@ root.render(
       <Route path="/sidebar" element={<Sidebar />} />
       <Route path="/blog" element={<Blog />} />
       <Route path="/contact" element={<Contact />} />
+      <Route path="/footer" element={<Footer />} />
     </Routes>
   </Router>
 );

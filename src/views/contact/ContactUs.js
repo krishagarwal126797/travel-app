@@ -86,7 +86,7 @@ const ContactForm = () => (
 
 const CTASection = () => (
   <section className="cta-section">
-    <h2>Join Our Community</h2>
+    <h1>Join Our Community</h1>
     <p>Follow us on social media for updates and special offers!</p>
     <div className="social-links">
       <a href="#">Facebook</a>

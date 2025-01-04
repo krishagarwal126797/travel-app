@@ -35,7 +35,7 @@ body {
   }
 
   .header {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/public/assets/img/blog1.jpg') no-repeat center center/cover;
+    /* background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/public/assets/img/blog1.jpg') no-repeat center center/cover; */
     color: white;
     text-align: center;
     padding: 60px 20px;
@@ -59,13 +59,36 @@ body {
   }
 
   .contact-container {
+    position: relative;
+    background-image: url(/public/assets/img/footer.png);
+    background-size: cover;
+    background-position: center;
     display: flex;
     justify-content: space-between;
     padding: 50px;
-    background-color: #1e1e2f;
     color: white;
+    overflow: hidden;
   }
-
+  
+  .contact-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Ensure it covers the full width */
+    height: 100%; /* Ensure it covers the full height */
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.5)
+    );
+    z-index: 1;
+  }
+  
+  .contact-container > * {
+    position: relative;
+    z-index: 2;
+  }
+  
   .contact-info {
     display: flex;
     flex-direction: column;
