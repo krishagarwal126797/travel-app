@@ -1,17 +1,47 @@
-import React from 'react';
-import '../home.css'
+import React from "react";
+import "./herosection.css";
 
-const HeroSection = () => {
+const Herosection = () => {
   return (
-    <div className="hero text-center text-white">
-      <h1>Plan Tours. Meet New Friends. Explore Together!</h1>
-      <p>Find the perfect tour or create your own adventure.</p>
-      <div className="d-flex justify-content-center mt-4">
-        <a href="#" className="btn btn-primary me-2">Find a Tour</a>
-        <a href="#" className="btn btn-secondary">Create a Tour</a>
+    <section className="herosection">
+    <div>
+      {/* Hero Section */}
+      <div className="hero-section">
+        <div className="content">
+          <h1>
+            Cabin In The Woods But In <br></br><span>A Good Way!</span>
+          </h1>
+          <p>
+            Now you can enjoy camping anywhere and anytime, and of course, it's safe with us.
+          </p>
+          <button>Get Started</button>
+        </div>
+      </div>
+
+      {/* Features Section */}
+      <div className="features-section">
+        <div className="features-grid">
+          <div className="feature-item">
+            <h2>10</h2>
+            <p>Years of Experience</p>
+          </div>
+          <div className="feature-item">
+            <h2>1K+</h2>
+            <p>Camping Destinations</p>
+          </div>
+          <div className="feature-item">
+            <h2>8K</h2>
+            <p>Happy Customers</p>
+          </div>
+          <div className="feature-item">
+            <h2>4.2</h2>
+            <p>Overall Rating</p>
+          </div>
+        </div>
       </div>
     </div>
+    </section>
   );
 };
 
-export default HeroSection;
+export default Herosection;
