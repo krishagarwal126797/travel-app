@@ -8,6 +8,7 @@ import Sidebar from './views/sidebar';
 import Blog from './views/blog/Blog';
 import Contact from './views/contact/ContactUs';
 import Footer from './views/footer';
+import CreateTour from './views/create tour/CreateTour';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
@@ -43,6 +44,7 @@ root.render(
       <Route path="/blog" element={<Blog />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/footer" element={<Footer />} />
+      <Route path="/createtour" element={<CreateTour />} />
     </Routes>
   </Router>
 );

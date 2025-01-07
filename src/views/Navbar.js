@@ -15,6 +15,7 @@ const NavbarComp = () => {
   };
 
   return (
+    <section className="NavbarComp">
     <Navbar
       expand="lg"
       className={`custom-navbar ${darkMode ? "navbar-dark" : "navbar-light"}`}
@@ -83,6 +84,7 @@ const NavbarComp = () => {
         </Navbar.Collapse>
       </Container>
     </Navbar>
+    </section>
   );
 };
 

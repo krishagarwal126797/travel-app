@@ -1,89 +1,121 @@
-footer {
-  background-color: #1a1a1a;
-  color: #f0f0f0;
-  padding: 40px 20px;
+/* Footer Styling */
+.custom-footer {
+  background-color: #0B0B28;
+  color: #FFFFFF;
+  padding: 50px 0;
 }
 
-.footer-top {
-  text-align: center;
-  margin-bottom: 20px;
+/* Subscribe Section */
+.subscribe-section {
+  background-color: #4866F5;
+  border-radius: 20px;
+  padding: 30px;
 }
 
-.footer-top .social-icons a {
-  color: #f0f0f0;
-  font-size: 20px;
-  margin: 0 10px;
-  transition: color 0.3s;
+.subscribe-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
 }
 
-.footer-top .social-icons a:hover {
-  color: #00bcd4;
+.subscribe-form {
+  max-width: 500px;
+  margin: 20px auto;
 }
 
-.footer-bottom {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+.subscribe-icon {
+  background: white;
+  border: none;
+  padding: 8px 10px;
+  border-radius: 20px 0 0 20px;
 }
 
-.footer-bottom .column ul {
+.subscribe-input {
+  border: none;
+  border-radius: 0;
+  padding: 10px 15px;
+}
+
+.subscribe-button {
+  border-radius: 0 20px 20px 0;
+  background-color: #3247C7;
+  color: white;
+  font-weight: bold;
+}
+
+.subscribe-button:hover {
+  background-color: #1F32A0;
+}
+
+/* Footer Links */
+.footer-heading {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.footer-links {
   list-style: none;
   padding: 0;
 }
 
-.footer-bottom .column ul li {
+.footer-links li {
   margin-bottom: 10px;
+  color: #A9A9A9;
 }
 
-.footer-bottom .column ul li a {
-  color: #f0f0f0;
+.footer-links a {
   text-decoration: none;
-  transition: color 0.3s;
+  color: inherit;
 }
 
-.footer-bottom .column ul li a:hover {
-  color: #00bcd4;
+.footer-links a:hover {
+  color: #4866F5;
 }
 
-.footer-bottom .newsletter {
-  grid-column: span 3;
-  text-align: center;
+/* Contact Icons */
+.contact-icon {
+  margin-right: 10px;
 }
 
-.footer-bottom .newsletter p {
-  margin-bottom: 10px;
+/* Social Links */
+.social-links a {
+  margin-right: 15px;
+  font-size: 18px;
+  color: white;
 }
 
-.footer-bottom .newsletter .subscribe {
-  display: flex;
-  justify-content: center;
+.social-links a:hover {
+  color: #4866F5;
 }
 
-.footer-bottom .newsletter .subscribe input {
-  padding: 10px;
-  border: none;
-  border-radius: 4px 0 0 4px;
-  width: 70%;
-}
-
-.footer-bottom .newsletter .subscribe button {
-  padding: 10px 20px;
-  border: none;
-  background-color: #00bcd4;
-  color: #fff;
-  border-radius: 0 4px 4px 0;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.footer-bottom .newsletter .subscribe button:hover {
-  background-color: #0097a7;
-}
-
-.footer-bottom-bar {
-  text-align: center;
-  margin-top: 20px;
+/* Footer Bottom */
+.footer-bottom p {
+  margin: 0;
+  color: #A9A9A9;
   font-size: 14px;
-  border-top: 1px solid #333;
-  padding-top: 10px;
+}
+
+/* Brand Section */
+.brand-logo {
+  display: flex;
+  align-items: center;
+}
+
+.brand-icon {
+  width: 40px;
+  height: 40px;
+  background-color: #4866F5;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.brand-title {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.brand-description {
+  font-size: 14px;
+  color: #A9A9A9;
 }

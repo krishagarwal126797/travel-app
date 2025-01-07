@@ -4,6 +4,7 @@ import './Sidebar.css';
 
 const Sidebar = () => {
   return (
+    <section className='sidebar'>
     <div className="sidebar">
       <ul className="sidebar-list">
         <li className="sidebar-item">
@@ -28,6 +29,7 @@ const Sidebar = () => {
         </li>
       </ul>
     </div>
+    </section>
   );
 };
 

@@ -1,4 +1,5 @@
 /* Sidebar.css */
+.sidebar{
 .sidebar {
     width: 60px; 
     height: 100vh;
@@ -68,4 +69,4 @@
   .sidebar:hover .sidebar-item .sidebar-icon {
     transform: scale(1.2); /* Slightly scale the icons on hover for emphasis */
   }
-  
+}

@@ -3,6 +3,7 @@ import './Blog.css'; // Assuming styles.css is renamed to App.css for consistenc
 
 function Blog() {
   return (
+    <section className='Blog'>
     <div>
       {/* Navbar */}
       <nav>
@@ -91,6 +92,7 @@ function Blog() {
         <p>&copy; 2024 MyCompany. All rights reserved.</p>
       </footer>
     </div>
+    </section>
   );
 }
 

@@ -1,12 +1,4 @@
-/* General Styling */
-body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    color: #333;
-}
-
+.Blog{
 /* Navbar */
 .header {
     background-color: #1e1e2f;
@@ -183,3 +175,4 @@ h2{
     text-align: center;
     padding: 20px;
   }
+}
