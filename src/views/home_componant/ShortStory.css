@@ -1,0 +1,60 @@
+.short_story{
+
+
+.short-story-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 40px;
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+  }
+  
+  .short-story-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-right: 30px;
+  }
+  
+  .short-story-image {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  .short-story-content {
+    margin-left: 50px;
+    max-width: 400px;
+    text-align: left;
+  }
+  
+  .short-story-content h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .short-story-content p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  
+  .see-more-btn {
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .see-more-btn:hover {
+    background-color: #0056b3;
+  }
+}

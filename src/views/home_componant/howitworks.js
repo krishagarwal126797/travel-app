@@ -1,29 +1,27 @@
-import React from 'react';
-import '../home.css';
+import React from "react";
+import "./ShortStory.css";
+import { StepIcon } from "@mui/material";
 
-const HowItWorks = () => {
+const ShortStory = () => {
   return (
-    <div className="container my-5">
-      <h2 className="text-center">How Does It Work?</h2>
-      <div className="row text-center mt-4">
-        <div className="col-md-4">
-          <img src="https://via.placeholder.com/100" alt="Plan Icon" />
-          <h5 className="mt-3">Plan a Tour</h5>
-          <p>Post your idea and invite others to join.</p>
-        </div>
-        <div className="col-md-4">
-          <img src="https://via.placeholder.com/100" alt="Browse Icon" />
-          <h5 className="mt-3">Browse Options</h5>
-          <p>Find tours that fit your schedule.</p>
-        </div>
-        <div className="col-md-4">
-          <img src="https://via.placeholder.com/100" alt="Join Icon" />
-          <h5 className="mt-3">Join and Explore</h5>
-          <p>Meet new friends and start your adventure.</p>
-        </div>
+    <section className="short_story">
+    <div className="short-story-container">
+      <div className="short-story-images">
+        <img src="/assets/img/h07.jpg" alt="Plane" className="short-story-image" />
+        <img src="/assets/img/h08.jpg" alt="Resort" className="short-story-image" />
+        <img src="/assets/img/h09.jpg" alt="Hiker" className="short-story-image" />
+        <img src="/assets/img/h10.jpg" alt="Sunset" className="short-story-image" />
+      </div>
+      <div className="short-story-content">
+        <h2>OUR SHORT STORY</h2>
+        <p>
+          Our aim is to make global corporate travel management more personalized and seamless, and we do this through a network of exceptional local agencies that are not only leaders in their own respective markets...
+        </p>
+        <button className="see-more-btn">See more</button>
       </div>
     </div>
+    </section>
   );
 };
 
-export default HowItWorks;
+export default ShortStory;
