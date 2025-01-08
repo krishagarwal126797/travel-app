@@ -11,6 +11,7 @@ import Footer from './views/footer';
 import CreateTour from './views/create tour/CreateTour';
 import DestinationsPage from './views/destination_page/desination';
 import DestinationDetailsPage from './views/destination_page/destination_details';
+import TourListing from './views/create tour/tour_listing';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
@@ -49,6 +50,7 @@ root.render(
       <Route path="/createtour" element={<CreateTour />} />
       <Route path="/destination" element={<DestinationsPage />} />
       <Route path="/destdetails" element={<DestinationDetailsPage />} />
+      <Route path="/tourlist" element={<TourListing />} />
     </Routes>
   </Router>
 );

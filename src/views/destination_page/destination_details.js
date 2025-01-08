@@ -93,22 +93,12 @@ const DestinationDetailsPage = () => {
                 delicious food, every moment was unforgettable." - Sarah L.
               </p>
             </div>
-            <img
-              src="/assets/img/h21.jpgg"
-              alt="Traveler Testimonial 1"
-              className="testimonial-image"
-            />
             <div className="testimonial">
               <p>
                 "A perfect destination for art and culture lovers. The museums
                 and galleries are incredible!" - Michael R.
               </p>
             </div>
-            <img
-              src="/assets/img/h12.jpg"
-              alt="Traveler Testimonial 2"
-              className="testimonial-image"
-            />
           </section>
 
           {/* Benefits Section */}
