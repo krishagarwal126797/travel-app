@@ -13,6 +13,8 @@ import DestinationsPage from './views/destination_page/desination';
 import DestinationDetailsPage from './views/destination_page/destination_details';
 import TourListing from './views/create tour/tour_listing';
 import ProfileCard from './views/profile card/ProfileCard';
+import TermsOfServicePage from './views/privacy/termsofservice';
+import PrivacyPolicyPage from './views/privacy/privacy';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
@@ -52,7 +54,9 @@ root.render(
       <Route path="/destination" element={<DestinationsPage />} />
       <Route path="/destdetails" element={<DestinationDetailsPage />} />
       <Route path="/tourlist" element={<TourListing />} />
+      <Route path="/privacy" element={<PrivacyPolicyPage />} />
       <Route path="/profilecard" element={<ProfileCard />} />
+      <Route path="/terms" element={<TermsOfServicePage />} />
     </Routes>
   </Router>
 );
