@@ -15,6 +15,7 @@ import TourListing from './views/create tour/tour_listing';
 import ProfileCard from './views/profile card/ProfileCard';
 import TermsOfServicePage from './views/privacy/termsofservice';
 import PrivacyPolicyPage from './views/privacy/privacy';
+import Pricing from './views/pricing/Pricing';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
@@ -57,6 +58,7 @@ root.render(
       <Route path="/privacy" element={<PrivacyPolicyPage />} />
       <Route path="/profilecard" element={<ProfileCard />} />
       <Route path="/terms" element={<TermsOfServicePage />} />
+      <Route path="/pricing" element={<Pricing />} />
     </Routes>
   </Router>
 );

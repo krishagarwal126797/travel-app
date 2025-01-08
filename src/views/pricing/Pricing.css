@@ -1,0 +1,200 @@
+.pricing{
+
+.pricing-page {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.pricing-header {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  padding: 50px 0;
+}
+
+.pricing-header h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  animation: fadeInDown 1s ease;
+}
+
+.pricing-header p {
+  font-size: 1.2rem;
+  animation: fadeInUp 1s ease;
+}
+
+
+
+
+.cta-section {
+  background: #6a11cb;
+  color: white;
+  padding: 50px 0;
+}
+
+
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.pricing-page {
+  background-color: #f8f9fa;
+  padding: 50px 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.pricing-section {
+  max-width: 1200px;
+  margin: 10px;
+}
+
+.pricing-card {
+  border: none;
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.free-plan {
+  background-color: #ffffff;
+  color: #000;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.startup-plan {
+  background-color: #eef4ff;
+  color: #0056b3;
+  box-shadow: 0 5px 15px rgba(0, 85, 179, 0.1);
+}
+
+.enterprise-plan {
+  background: linear-gradient(135deg, #5f72ff, #9b87ff);
+  color: #fff;
+  box-shadow: 0 5px 15px rgba(95, 114, 255, 0.3);
+}
+
+.price {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.subtext {
+  font-size: 0.9rem;
+  color: #6c757d;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.cta-button {
+  background-color: #0056b3;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #004494;
+}
+
+.enterprise-plan .cta-button {
+  background-color: #ffffff;
+  color: #5f72ff;
+}
+
+.enterprise-plan .cta-button:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+.faq-section .accordion-header {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.faq-section .accordion-body {
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border: 1px solid #ddd;
+}
+.pricing-comparison-section {
+  background-color: #f9f9f9;
+  padding: 40px 20px;
+  border-radius: 8px;
+}
+
+.pricing-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.pricing-table th,
+.pricing-table td {
+  padding: 16px;
+  text-align: center;
+  border: 1px solid #e5e5e5;
+}
+
+.pricing-table th {
+  background-color: #6c63ff;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.pricing-table td {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.pricing-table .check {
+  color: #4caf50;
+  font-weight: bold;
+}
+
+.pricing-table .cross {
+  color: #f44336;
+  font-weight: bold;
+}
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+.pricing-comparison-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+
+}
