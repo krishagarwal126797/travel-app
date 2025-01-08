@@ -14,6 +14,7 @@ import {
 
 const Footer = () => {
   return (
+    <section className="footer">
     <footer className="custom-footer">
       <Container>
         {/* Subscribe Section */}
@@ -106,6 +107,7 @@ const Footer = () => {
         </Row>
       </Container>
     </footer>
+    </section>
   );
 };
 
