@@ -17,8 +17,10 @@ import TermsOfServicePage from './views/privacy/termsofservice';
 import PrivacyPolicyPage from './views/privacy/privacy';
 import Pricing from './views/pricing/Pricing';
 import MyTour from './views/profile card/MyTour';
+import SaveDestinationss from './views/profile card/SaveDestinations';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import SaveDestinations from './views/profile card/SaveDestinations';
 
 // Check if user is authenticated by verifying if data exists in localStorage
 const isAuthenticated = () => {
@@ -61,6 +63,7 @@ root.render(
       <Route path="/terms" element={<TermsOfServicePage />} />
       <Route path="/pricing" element={<Pricing />} />
       <Route path="/mytour" element={<MyTour />} />
+      <Route path="/SaveDestination" element={<SaveDestinations />} />
     </Routes>
   </Router>
 );
