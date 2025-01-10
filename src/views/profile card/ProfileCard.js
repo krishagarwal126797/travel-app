@@ -137,6 +137,100 @@ const ProfilePage = () => {
               </form>
             </div>
           </div>
+                  {/* <section id="features" class="features-section">
+        <h2>Why Create a Tour?</h2>
+        <div class="features-list">
+            <div class="feature">
+                <h3>Meet New Friends</h3>
+                <p>Connect with like-minded travelers on your adventures.</p>
+            </div>
+            <div class="feature">
+                <h3>Explore New Destinations</h3>
+                <p>Discover unique places and hidden gems around the world.</p>
+            </div>
+            <div class="feature">
+                <h3>Flexible Scheduling</h3>
+                <p>Plan your tours at your convenience.</p>
+            </div>
+        </div>
+    </section> */}
+        <div class="review-section">
+          <h2 class="section-title">Customer Reviews</h2>
+
+
+          <div class="reviews">
+            <div class="review">
+              <div class="review-header">
+                <span class="user-name">John Doe</span>
+                <span class="stars">⭐⭐⭐⭐⭐</span>
+              </div>
+              <p class="review-text">Great experience! Highly recommended.</p>
+            </div>
+
+            <div class="review">
+              <div class="review-header">
+                <span class="user-name">Jane Smith</span>
+                <span class="stars">⭐⭐⭐⭐</span>
+              </div>
+              <p class="review-text">Good service, but delivery was slightly delayed.</p>
+            </div>
+          </div>
+
+          {/* <!-- Review Form --> */}
+          <form class="review-form">
+            <h3>Write a Review</h3>
+            <label for="name">Your Name</label>
+            <input type="text" id="name" placeholder="Enter your name" required />
+
+            <label for="rating">Rating</label>
+            <select id="rating">
+              <option value="5">5 Stars</option>
+              <option value="4">4 Stars</option>
+              <option value="3">3 Stars</option>
+              <option value="2">2 Stars</option>
+              <option value="1">1 Star</option>
+            </select>
+
+            <label for="review">Your Review</label>
+            <textarea id="review" rows="4" placeholder="Write your review here" required></textarea>
+
+            <button type="submit">Submit Review</button>
+          </form>
+        </div>
+
+        <div class="timeline-section">
+          <h2 class="section-title">Our Journey</h2>
+
+          <div class="timeline">
+            {/* <!-- Timeline Item --> */}
+            <div class="timeline-item">
+              <div class="timeline-date">2021</div>
+              <div class="timeline-content">
+                <h3 class="event-title">Company Founded</h3>
+                <p>Our journey began with a vision to revolutionize the industry and deliver excellence to our customers.</p>
+              </div>
+            </div>
+
+            {/* <!-- Timeline Item --> */}
+            <div class="timeline-item">
+              <div class="timeline-date">2022</div>
+              <div class="timeline-content">
+                <h3 class="event-title">First Milestone Achieved</h3>
+                <p>Reached 10,000 happy customers and expanded operations to 5 major cities.</p>
+              </div>
+            </div>
+
+            {/* <!-- Timeline Item --> */}
+            <div class="timeline-item">
+              <div class="timeline-date">2023</div>
+              <div class="timeline-content">
+                <h3 class="event-title">Award Recognition</h3>
+                <p>Won the Best Startup Award for innovation and outstanding customer service.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         </div>
         <Footer />
       </section>

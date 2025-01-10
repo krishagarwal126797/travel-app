@@ -1,0 +1,242 @@
+/* General Styles */
+.tourdetails{
+  
+  .tour-details-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .section-title {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #0073e6;
+  }
+  
+  /* Header Section */
+  .tour-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .main-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .tour-title {
+    font-size: 36px;
+    margin: 20px 0;
+  }
+  
+  .tour-overview {
+    font-size: 18px;
+    color: #555;
+  }
+  
+/* Stats Section */
+.tour-stats {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  
+  .tour-stats .stats-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .stat-card {
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: #fff;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .stat-card-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
+  
+  .stat-card-body {
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .stat-card-title {
+    font-size: 22px;
+    color: #0073e6;
+    margin-bottom: 10px;
+  }
+  
+  .stat-card-text {
+    font-size: 16px;
+    color: #555;
+  }  
+  
+  /* Feature Section */
+  .tour-features .feature {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .feature-image {
+    width: 50%;
+    border-radius: 8px;
+  }
+  
+  /* Timeline Section */
+.tour-timeline {
+    margin: 40px auto;
+    max-width: 800px;
+    text-align: center;
+  }
+  
+  .timeline-container {
+    position: relative;
+    padding: 20px 0;
+  }
+  
+  .timeline-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 4px;
+    height: 100%;
+    background-color: #0073e6;
+    transform: translateX(-50%);
+  }
+  
+  .timeline-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+  
+  .timeline-item .timeline-icon {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border: 4px solid #0073e6;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+  
+  .timeline-item .timeline-icon img {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .timeline-item .timeline-content {
+    max-width: 400px;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .timeline-item .timeline-content.left {
+    margin-right: 60px;
+    text-align: right;
+  }
+  
+  .timeline-item .timeline-content.right {
+    margin-left: 60px;
+    text-align: left;
+  }
+  
+  .timeline-item:nth-child(even) .timeline-content {
+    order: 1;
+  }
+  
+  .timeline-item:nth-child(even) .timeline-icon {
+    order: 2;
+  }  
+  
+  /* Locations Section */
+  .tour-locations .location {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .location-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  /* Testimonial Section */
+  .testimonial {
+    background: #f0f8ff;
+    padding: 20px;
+    border-left: 4px solid #0073e6;
+    margin-bottom: 20px;
+  }
+  
+  blockquote cite {
+    font-style: italic;
+    display: block;
+    margin-top: 10px;
+  }
+  
+  /* Reviews Section */
+  .tour-reviews .btn-primary {
+    margin-top: 10px;
+  }
+  
+  /* CTA Section */
+  .tour-cta {
+    text-align: center;
+    margin: 40px 0;
+  }
+  
+  .tour-cta .btn-primary,
+  .tour-cta .btn-secondary {
+    margin: 10px;
+  }
+  
+  /* CTA Form Section */
+  .cta-form {
+    margin-top: 40px;
+  }
+  
+  .cta-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .cta-form input,
+  .cta-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .cta-form .btn-primary {
+    align-self: flex-start;
+  }
+}

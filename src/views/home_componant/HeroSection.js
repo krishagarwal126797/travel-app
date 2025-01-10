@@ -58,17 +58,17 @@ const Herosection = () => {
           <div className="col-md-6 d-flex justify-content-center">
             <div className="image-stack">
               <img
-                src="/assets/img/Home4.jpg" // Replace with your image path
+                src="/assets/img/h06.jpg" 
                 alt="Plane"
                 className="capsule-image top"
               />
               <img
-                src="/assets/img/home2.jpg" // Replace with your image path
+                src="/assets/img/h01.jpg" 
                 alt="Travel"
                 className="capsule-image middle"
               />
               <img
-                src="/assets/img/home3.jpg" // Replace with your image path
+                src="/assets/img/h04.jpg" 
                 alt="Hiker"
                 className="capsule-image bottom"
               />
