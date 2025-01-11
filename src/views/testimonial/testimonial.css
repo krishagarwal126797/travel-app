@@ -1,0 +1,226 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  background: #f8f9fa;
+}
+
+.testimonials-page {
+  padding: 20px;
+}
+
+/* Header Section */
+.testimonial-header {
+  text-align: center;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  color: white;
+  padding: 50px 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.testimonial-header h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+.testimonial-header p {
+  font-size: 1.2em;
+  margin-top: 10px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Testimonial Section */
+.testimonials-section {
+  margin: 20px 0;
+}
+
+.testimonials-section h2 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #6a11cb;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Testimonial Card */
+.testimonial-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.testimonial-name {
+  font-size: 1.2em;
+  margin: 10px 0 5px;
+  color: #333;
+}
+
+.testimonial-location {
+  font-size: 0.9em;
+  color: #666;
+}
+
+.testimonial-text {
+  font-size: 1em;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+/* Team Section */
+/* Team Section (Updated for Travelers Group) */
+.team-section {
+  margin: 40px 0;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+}
+
+.team-section h2 {
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #6a11cb;
+}
+
+.team-section p {
+  text-align: center;
+  font-size: 1.2em;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.team-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.team-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.team-name {
+  font-size: 1.4em;
+  margin: 10px 0 5px;
+}
+
+.team-destination {
+  font-size: 1.1em;
+  color: #6a11cb;
+}
+
+.team-description {
+  font-size: 1em;
+  color: #666;
+  margin-top: 10px;
+}
+
+/*CTA Section*/
+.cta-section {
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: 40px;
+  border-radius: 10px;
+}
+
+.cta-content h2 {
+  font-size: 2.5em;
+  margin-bottom: 15px;
+}
+
+.cta-content p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.cta-button {
+  background: white;
+  color: #2575fc;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #2575fc;
+  color: white;
+}
+
+.share-button {
+  border: 2px solid #6a11cb;
+}
+
+.sign-up-button {
+  border: 2px solid #2575fc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+  .cta-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+

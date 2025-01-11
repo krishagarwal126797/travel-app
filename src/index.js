@@ -15,6 +15,7 @@ import TourListing from './views/create tour/tour_listing';
 import ProfileCard from './views/profile card/ProfileCard';
 import TermsOfServicePage from './views/privacy/termsofservice';
 import PrivacyPolicyPage from './views/privacy/privacy';
+import Testimonials from './views/testimonial/testimonial';
 import Pricing from './views/pricing/Pricing';
 import MyTour from './views/profile card/MyTour';
 import SaveDestinationss from './views/profile card/SaveDestinations';
@@ -68,6 +69,7 @@ root.render(
       <Route path="/SaveDestination" element={<SaveDestinations />} />
       <Route path="/settings" element={<Settings/>} />
       <Route path="/tourdetails" element={<TourDetailsPage/>} />
+      <Route path="/testimonial" element={<Testimonials/>} />
     </Routes>
   </Router>
 );
