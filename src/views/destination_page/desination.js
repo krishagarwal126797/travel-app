@@ -22,9 +22,12 @@ const DestinationsPage = () => {
         <h2>Our Featured Destinations</h2>
         <div className="portfolio-list">
           <div className="portfolio-item">
-            <img src="/assets/img/h07.jpg" alt="Destination 1" />
-            <h3>Paris</h3>
-            <p>The city of lights and love, offering world-class art, fashion, and food.</p>
+          <a href="/destdetails" className="portfolio-item">
+  <img src="/assets/img/h07.jpg" alt="Destination 1" />
+  <h3>Paris</h3>
+  <p>The city of lights and love, offering world-class art, fashion, and food.</p>
+</a>
+
           </div>
           <div className="portfolio-item">
             <img src="/assets/img/h07.jpg" alt="Destination 2" />

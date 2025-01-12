@@ -48,46 +48,66 @@ const TourDetailsPage = () => {
 
 
       {/* Feature Section */}
-      <section className="tour-features">
-        <h2 className="section-title">Unique Experiences</h2>
-        <div className="feature">
-          <img src="/assets/img/h20.jpg" alt="Feature" className="feature-image" />
-          <p>
-            Witness the stunning beauty of the Alps with guided treks, luxurious stays, and immersive cultural experiences.
-          </p>
-        </div>
-      </section>
-      <br></br>
       <section className="tour-timeline">
   <h2 className="section-title">Tour Timeline</h2>
   <div className="timeline-container">
+    {/* Day 1 */}
     <div className="timeline-item">
-      <div className="timeline-content left">
-        <p><strong>2019:</strong> Why and how your company was started - mention the founders and the initial muse.</p>
+      <div className="timeline-content">
+        <p><strong>Day 1: 01 Jan 2025</strong></p>
+        <p>Arrival in Zurich, Switzerland. Welcome dinner and orientation.</p>
       </div>
       <div className="timeline-icon">
-        <img src="/assets/img/lightbulb.png" alt="2019 Icon" />
+        <img src="/assets/img/arrival.png" alt="Day 1 Icon" />
       </div>
     </div>
+
+    {/* Day 2 */}
     <div className="timeline-item">
       <div className="timeline-icon">
-        <img src="/assets/img/gears.png" alt="2020 Icon" />
+        <img src="/assets/img/hiking.png" alt="Day 2 Icon" />
       </div>
-      <div className="timeline-content right">
-        <p><strong>2020:</strong> When did that muse become an actual reality? The moment when the first steps were taken to start the foundation of the company.</p>
+      <div className="timeline-content">
+        <p><strong>Day 2: 02 Jan 2025</strong></p>
+        <p>Guided trek through the breathtaking Alps. Visit local villages.</p>
       </div>
     </div>
+
+    {/* Day 3 */}
     <div className="timeline-item">
-      <div className="timeline-content left">
-        <p><strong>2022:</strong> Mention the first project launch by the company, early successes, and even failures that you learned from.</p>
+      <div className="timeline-content">
+        <p><strong>Day 3: 03 Jan 2025</strong></p>
+        <p>Visit the iconic Matterhorn. Enjoy scenic cable car rides.</p>
       </div>
       <div className="timeline-icon">
-        <img src="/assets/img/rocket.png" alt="2022 Icon" />
+        <img src="/assets/img/mountain.png" alt="Day 3 Icon" />
       </div>
     </div>
-    {/* Add more timeline items as needed */}
+
+    {/* Day 4 */}
+    <div className="timeline-item">
+      <div className="timeline-icon">
+        <img src="/assets/img/boat.png" alt="Day 4 Icon" />
+      </div>
+      <div className="timeline-content">
+        <p><strong>Day 4: 04 Jan 2025</strong></p>
+        <p>Boat tour on Lake Geneva. Wine tasting at a local vineyard.</p>
+      </div>
+    </div>
+
+    {/* Day 5 */}
+    <div className="timeline-item">
+      <div className="timeline-content">
+        <p><strong>Day 5: 05 Jan 2025</strong></p>
+        <p>Explore Interlaken. Optional paragliding experience.</p>
+      </div>
+      <div className="timeline-icon">
+        <img src="/assets/img/paragliding.png" alt="Day 5 Icon" />
+      </div>
+    </div>
   </div>
 </section>
+
 
       {/* Locations Section */}
       <section className="tour-locations">

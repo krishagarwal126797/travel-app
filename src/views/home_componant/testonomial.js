@@ -8,22 +8,28 @@ const Testimonials = () => {
         <h2 className="text-center">Hear from Fellow Travelers</h2>
         <div className="row mt-4">
           <div className="col-md-4">
+          <a href="/testimonial" className="col-md-4">
             <blockquote className="blockquote">
               <p>"This platform helped me meet amazing travel buddies!"</p>
               <footer className="blockquote-footer">John Doe</footer>
             </blockquote>
+            </a>
           </div>
           <div className="col-md-4">
+          <a href="/testimonial" className="col-md-4">
             <blockquote className="blockquote">
               <p>"Planning tours has never been this easy."</p>
               <footer className="blockquote-footer">Jane Smith</footer>
             </blockquote>
+            </a>
           </div>
           <div className="col-md-4">
+          <a href="/testimonial" className="col-md-4">
             <blockquote className="blockquote">
               <p>"I’ve discovered incredible places through this site."</p>
               <footer className="blockquote-footer">Sam Wilson</footer>
             </blockquote>
+            </a>
           </div>
         </div>
       </div>

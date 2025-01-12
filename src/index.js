@@ -24,6 +24,8 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import SaveDestinations from './views/profile card/SaveDestinations';
 import Settings from './views/profile card/Settings';
 import TourDetailsPage from './views/create tour/tourdetails';
+import ReviewsPage from './views/review';
+import Reviewsform from './views/reviewform';
 
 // Check if user is authenticated by verifying if data exists in localStorage
 const isAuthenticated = () => {
@@ -70,6 +72,8 @@ root.render(
       <Route path="/settings" element={<Settings/>} />
       <Route path="/tourdetails" element={<TourDetailsPage/>} />
       <Route path="/testimonial" element={<Testimonials/>} />
+      <Route path="/review" element={<ReviewsPage/>} />
+      <Route path="/reviewform" element={<Reviewsform/>} />
     </Routes>
   </Router>
 );

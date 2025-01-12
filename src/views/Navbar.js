@@ -33,7 +33,7 @@ const NavbarComp = () => {
         {/* Navigation Links */}
         <Navbar.Collapse id="navbar-nav" className="justify-content-end">
           <Nav className={`nav-buttons ${darkMode ? "navbuttons-dark" : "navbuttons-light"}`}>
-            <Button  className="nav-btn">
+            <Button  className="nav-btn" href="/home">
               <FaHome className="icon" />
               Home
             </Button>
@@ -72,12 +72,12 @@ const NavbarComp = () => {
 
           {/* Login Button */}
           <Nav>
-            <Button variant="dark" className="login-btn">
+            <Button variant="dark" className="login-btn" href="/login">
               Login
             </Button>
           </Nav>
           <Nav>
-            <Button variant="dark" className="signup-btn">
+            <Button variant="dark" className="signup-btn" href="/Register">
               Sign up
             </Button>
           </Nav>

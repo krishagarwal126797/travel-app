@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "./ProfileCard.css";
 import NavbarComp from "../Navbar";
 import Footer from "../footer";
+import ReviewsPage from "../review";
+import Reviewsform from "../reviewform";
 
 const ProfilePage = () => {
   const [isEditable, setIsEditable] = useState(false); // State to control edit mode
@@ -137,24 +139,9 @@ const ProfilePage = () => {
               </form>
             </div>
           </div>
-                  {/* <section id="features" class="features-section">
-        <h2>Why Create a Tour?</h2>
-        <div class="features-list">
-            <div class="feature">
-                <h3>Meet New Friends</h3>
-                <p>Connect with like-minded travelers on your adventures.</p>
-            </div>
-            <div class="feature">
-                <h3>Explore New Destinations</h3>
-                <p>Discover unique places and hidden gems around the world.</p>
-            </div>
-            <div class="feature">
-                <h3>Flexible Scheduling</h3>
-                <p>Plan your tours at your convenience.</p>
-            </div>
-        </div>
-    </section> */}
-        <div class="review-section">
+          <ReviewsPage />
+          <Reviewsform />
+        {/* <div class="review-section">
           <h2 class="section-title">Customer Reviews</h2>
 
 
@@ -174,10 +161,10 @@ const ProfilePage = () => {
               </div>
               <p class="review-text">Good service, but delivery was slightly delayed.</p>
             </div>
-          </div>
+          </div> */}
 
           {/* <!-- Review Form --> */}
-          <form class="review-form">
+          {/* <form class="review-form">
             <h3>Write a Review</h3>
             <label for="name">Your Name</label>
             <input type="text" id="name" placeholder="Enter your name" required />
@@ -195,8 +182,8 @@ const ProfilePage = () => {
             <textarea id="review" rows="4" placeholder="Write your review here" required></textarea>
 
             <button type="submit">Submit Review</button>
-          </form>
-        </div>
+          </form> */}
+        {/* </div> */}
 
         <div class="timeline-section">
           <h2 class="section-title">Our Journey</h2>
