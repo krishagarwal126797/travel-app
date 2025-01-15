@@ -3,6 +3,8 @@ import { Navbar, Nav, Button, Container } from "react-bootstrap";
 import { FaPlay, FaTag, FaInfoCircle, FaMoon, FaSun,FaHome,FaCaretDown, FaMapMarkerAlt } from "react-icons/fa";
 import {  Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from "reactstrap";
 import "./Navbar.css";
+import { Link } from 'react-router-dom';
+import Home from "./Home";
 
 const NavbarComp = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -33,10 +35,12 @@ const NavbarComp = () => {
         {/* Navigation Links */}
         <Navbar.Collapse id="navbar-nav" className="justify-content-end">
           <Nav className={`nav-buttons ${darkMode ? "navbuttons-dark" : "navbuttons-light"}`}>
-            <Button  className="nav-btn" href="/home">
+          <Link to="/home">
+            <Button  className="nav-btn">
               <FaHome className="icon" />
               Home
             </Button>
+            </Link>
             <Button  className="nav-btn">
               <FaInfoCircle className="icon" />
               About Us
@@ -72,14 +76,18 @@ const NavbarComp = () => {
 
           {/* Login Button */}
           <Nav>
-            <Button variant="dark" className="login-btn" href="/login">
-              Login
-            </Button>
-          </Nav>
+            <Link to="/Login">
+                <Button variant="dark" className="login-btn">
+                    Login
+                </Button>
+            </Link>
+        </Nav>
           <Nav>
-            <Button variant="dark" className="signup-btn" href="/Register">
+          <Link to="/register">
+            <Button variant="dark" className="signup-btn">
               Sign up
             </Button>
+            </Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

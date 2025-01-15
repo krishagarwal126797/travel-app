@@ -1,4 +1,6 @@
 import React from 'react';
+import NavbarComp from '../Navbar';
+import Footer from '../footer';
 import './Blog.css'; // Assuming styles.css is renamed to App.css for consistency
 
 function Blog() {
@@ -6,15 +8,7 @@ function Blog() {
     <section className='Blog'>
     <div>
       {/* Navbar */}
-      <nav>
-        <ul className="navbar">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-
+      <NavbarComp />
       {/* Header Section */}
       <header id="home">
         <div className="header-content">
@@ -68,7 +62,7 @@ function Blog() {
       </section>
 
       {/* CTA Section */}
-      <section className="cta-section">
+      {/* <section className="cta-section">
         <h1>Join Our Community</h1>
         <p>Follow us on social media for updates and special offers!</p>
         <div className="social-links">
@@ -76,7 +70,7 @@ function Blog() {
           <a href="#">Twitter</a>
           <a href="#">Instagram</a>
         </div>
-      </section>
+      </section> */}
 
       {/* Newsletter Section */}
       <section id="newsletter">
@@ -88,9 +82,7 @@ function Blog() {
       </section>
 
       {/* Footer */}
-      <footer>
-        <p>&copy; 2024 MyCompany. All rights reserved.</p>
-      </footer>
+     <Footer />
     </div>
     </section>
   );
