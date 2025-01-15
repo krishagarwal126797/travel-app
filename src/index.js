@@ -18,10 +18,9 @@ import PrivacyPolicyPage from './views/privacy/privacy';
 import Testimonials from './views/testimonial/testimonial';
 import Pricing from './views/pricing/Pricing';
 import MyTour from './views/profile card/MyTour';
-import SaveDestinationss from './views/profile card/SaveDestinations';
+import SaveDestinations from './views/profile card/SaveDestinations';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
-import SaveDestinations from './views/profile card/SaveDestinations';
 import Settings from './views/profile card/Settings';
 import TourDetailsPage from './views/create tour/tourdetails';
 import ReviewsPage from './views/review';
@@ -74,6 +73,7 @@ root.render(
       <Route path="/testimonial" element={<Testimonials/>} />
       <Route path="/review" element={<ReviewsPage/>} />
       <Route path="/reviewform" element={<Reviewsform/>} />
+
     </Routes>
   </Router>
 );

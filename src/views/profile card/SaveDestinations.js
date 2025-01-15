@@ -146,4 +146,4 @@ const SaveDestinations = () => {
   )
 }
 
-export default SaveDestinations
+export default SaveDestinations;

@@ -54,8 +54,7 @@ const Footer = () => {
           <Col md={3} className="mb-4">
             <h5 className="footer-heading">Service</h5>
             <ul className="footer-links">
-              <li><a href="#about">About Us</a></li>
-              <li><a href="#contact">Contact Us</a></li>
+              <li><a href="/">Contact Us</a></li>
               <li><a href="#features">Features</a></li>
               <li><a href="#blog">Blog</a></li>
             </ul>
