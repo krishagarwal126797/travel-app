@@ -113,25 +113,156 @@ body {
 }
 
 /* Testimonials */
-.testimonial {
-    background-color: white;
-    padding: 60px 0;
-}
-
-.testimonial blockquote {
-    background-color: #333;
-    border-left: 5px solid #007bff;
-    padding: 15px 25px;
+.testimonial-section {
+    background: #00222E;
+    padding: 50px 0;
+  }
+  
+  .testimonial-section h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #FF9F43;
+    margin-bottom: 40px;
+  }
+  
+  .testimonial-card {
+    background: linear-gradient(135deg, #04303E, #065D6A);
+    border-radius: 20px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    margin: 15px;
+    gap: 20px;
+  }
+  
+  .image-container img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #FF9F43;
+  }
+  
+  blockquote p {
+    font-style: italic;
     font-size: 1.1rem;
-    color: #bbb;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
+    line-height: 1.5;
+    color: white;
+    margin-bottom: 20px;
+  }
+  
+  blockquote .blockquote-footer {
+    color: #FF9F43;
+    font-size: 0.9rem;
+  }
+  
+  .slick-prev,
+  .slick-next {
+    z-index: 1;
+    background: #FF9F43;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .slick-prev:hover,
+  .slick-next:hover {
+    background: #ffa733;
+  }
+  
+  .slick-prev:before,
+  .slick-next:before {
+    font-size: 20px;
+    color: #00222E;
+  }  
+  
+  
 
-.testimonial blockquote footer {
-    font-size: 1rem;
-    color: #007bff;
+.popularDestination {
+    background-color: aquamarine;
+  }
+  
+  .popularDestination .destination-card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .popularDestination .destination-card .card-img-top {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  
+  .popularDestination .price-tag {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ff7f00;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 14px;
     font-weight: bold;
-}
-
-
+  }
+  
+  .popularDestination .card-body {
+    text-align: center;
+    padding: 15px;
+  }
+  
+  .popularDestination .location-text {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: gray;
+    margin-bottom: 5px;
+  }
+  
+  .popularDestination .card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 5px;
+  }
+  
+  .popularDestination .ratings {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  
+  .popularDestination .ratings .star-rating {
+    font-size: 16px;
+    margin-right: 2px;
+  }
+  
+  .popularDestination .ratings .review-count {
+    font-size: 12px;
+    color: gray;
+    margin-left: 5px;
+  }
+  
+  .popularDestination .see-more-btn {
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    /* padding: 10px 20px; */
+    border-radius: 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+  
+  .popularDestination .see-more-btn:hover {
+    background-color: #0056b3;
+    color: white;
+  }
 
