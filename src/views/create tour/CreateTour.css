@@ -22,44 +22,43 @@
 /* CTA Form Section */
 .cta-form {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
+  align-items: stretch; /* Ensures both sections have the same height */
   padding: 2rem;
-  gap: 2rem;
 }
 
 .form-section {
   flex: 1;
-  max-width: 45%;
   background-color: #D0DDD0;
   padding: 2rem;
-  border-radius: 10px;
+  border-radius: 10px; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 10px;
 }
 
 .image-section {
   flex: 1;
-  max-width: 45%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .tour-image {
-  /* background: url(/public/assets/login.jpg); */
-  max-width: 100%;
+  width: 100%;
+  height: 100%; 
+  object-fit: cover; 
   border-radius: 10px;
-  max-height: auto;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-
-/* Adjusted Input Styling */
 .cta-form input,
 .cta-form textarea,
 .cta-form select,
 .cta-form button {
   width: 100%;
-  padding: 0.8rem;
+  height: 30px;
   margin-bottom: 1rem;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -73,10 +72,35 @@
   cursor: pointer;
   transition: background-color 0.3s;
 }
+#description{
+  width: 100%;
+  height: auto;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  font-size: 1rem;
+}
 
 .cta-form button:hover {
   background-color: #0056b3;
 }
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .cta-form {
+    flex-direction: column;
+  }
+
+  .form-section,
+  .image-section {
+    max-width: 100%;
+    border-radius: 0;
+  }
+
+  .tour-image {
+    height: auto; 
+  }
+}
+
 
 /* Responsive Styling */
 @media (max-width: 768px) {
