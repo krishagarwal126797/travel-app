@@ -25,6 +25,7 @@ import Settings from './views/profile card/Settings';
 import TourDetailsPage from './views/create tour/tourdetails';
 import ReviewsPage from './views/review';
 import Reviewsform from './views/reviewform';
+import HowItWorks from './views/How_itsWorking/itsWorking';
 
 // Check if user is authenticated by verifying if data exists in localStorage
 const isAuthenticated = () => {
@@ -73,6 +74,7 @@ root.render(
       <Route path="/testimonial" element={<Testimonials/>} />
       <Route path="/review" element={<ReviewsPage/>} />
       <Route path="/reviewform" element={<Reviewsform/>} />
+      <Route path="/How_itsWorking" element={<HowItWorks/>} />
 
     </Routes>
   </Router>
