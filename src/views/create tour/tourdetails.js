@@ -47,66 +47,74 @@ const TourDetailsPage = () => {
 </section>
 
 
-      {/* Feature Section */}
-      <section className="tour-timeline">
-  <h2 className="section-title">Tour Timeline</h2>
-  <div className="timeline-container">
-    {/* Day 1 */}
-    <div className="timeline-item">
-      <div className="timeline-content">
-        <p><strong>Day 1: 01 Jan 2025</strong></p>
+<section class="tour-timeline">
+  <h2 class="section-title">Tour Timeline</h2>
+  <div class="timeline-container">
+    <div class="timeline-item">
+      <div class="timeline-top">
+        <p class="timeline-date">01 Jan 2025</p>
+        <div class="timeline-icon">
+          <img src="/assets/img/arrival.png" alt="Day 1 Icon" />
+        </div>
+      </div>
+      <div class="timeline-content">
+        <h3>Day 1</h3>
         <p>Arrival in Zurich, Switzerland. Welcome dinner and orientation.</p>
       </div>
-      <div className="timeline-icon">
-        <img src="/assets/img/arrival.png" alt="Day 1 Icon" />
-      </div>
     </div>
+    <div class="timeline-item">
+      <div class="timeline-top">
+        <p class="timeline-date">02 Jan 2025</p>
+        <div class="timeline-icon">
+        <img class="icon-image" src="/assets/img/calendar_7143015.png" alt="Day 2 Icon" />
 
-    {/* Day 2 */}
-    <div className="timeline-item">
-      <div className="timeline-icon">
-        <img src="/assets/img/hiking.png" alt="Day 2 Icon" />
+
+        </div>
       </div>
-      <div className="timeline-content">
-        <p><strong>Day 2: 02 Jan 2025</strong></p>
+      <div class="timeline-content">
+        <h3>Day 2</h3>
         <p>Guided trek through the breathtaking Alps. Visit local villages.</p>
       </div>
     </div>
-
-    {/* Day 3 */}
-    <div className="timeline-item">
-      <div className="timeline-content">
-        <p><strong>Day 3: 03 Jan 2025</strong></p>
-        <p>Visit the iconic Matterhorn. Enjoy scenic cable car rides.</p>
+    <div class="timeline-item">
+      <div class="timeline-top">
+        <p class="timeline-date">02 Jan 2025</p>
+        <div class="timeline-icon">
+          <img src="/assets/img/hiking.png" alt="Day 2 Icon" />
+        </div>
       </div>
-      <div className="timeline-icon">
-        <img src="/assets/img/mountain.png" alt="Day 3 Icon" />
-      </div>
-    </div>
-
-    {/* Day 4 */}
-    <div className="timeline-item">
-      <div className="timeline-icon">
-        <img src="/assets/img/boat.png" alt="Day 4 Icon" />
-      </div>
-      <div className="timeline-content">
-        <p><strong>Day 4: 04 Jan 2025</strong></p>
-        <p>Boat tour on Lake Geneva. Wine tasting at a local vineyard.</p>
+      <div class="timeline-content">
+        <h3>Day 3</h3>
+        <p>Guided trek through the breathtaking Alps. Visit local villages.</p>
       </div>
     </div>
-
-    {/* Day 5 */}
-    <div className="timeline-item">
-      <div className="timeline-content">
-        <p><strong>Day 5: 05 Jan 2025</strong></p>
-        <p>Explore Interlaken. Optional paragliding experience.</p>
+    <div class="timeline-item">
+      <div class="timeline-top">
+        <p class="timeline-date">02 Jan 2025</p>
+        <div class="timeline-icon">
+          <img src="/assets/img/hiking.png" alt="Day 2 Icon" />
+        </div>
       </div>
-      <div className="timeline-icon">
-        <img src="/assets/img/paragliding.png" alt="Day 5 Icon" />
+      <div class="timeline-content">
+        <h3>Day 4</h3>
+        <p>Guided trek through the breathtaking Alps. Visit local villages.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-top">
+        <p class="timeline-date">02 Jan 2025</p>
+        <div class="timeline-icon">
+          <img src="/assets/img/hiking.png" alt="Day 2 Icon" />
+        </div>
+      </div>
+      <div class="timeline-content">
+        <h3>Day 5</h3>
+        <p>Guided trek through the breathtaking Alps. Visit local villages.</p>
       </div>
     </div>
   </div>
 </section>
+
 
 
       {/* Locations Section */}

@@ -86,62 +86,102 @@
     color: #555;
   }  
   
-  /* Feature Section */
-  .tour-features .feature {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-  }
-  
-  .feature-image {
-    width: 50%;
-    border-radius: 8px;
-  }
-  
-  /* Timeline Section */
- /* Tour Timeline Section */
+  /* Tour Timeline Section */
 .tour-timeline {
   margin: 40px auto;
-  max-width: 800px;
+  max-width: 1200px;
   text-align: center;
 }
 
 .timeline-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 40px;
+  justify-content: space-between;
+  position: relative;
+}
+
+.timeline-container::before {
+  content: "";
+  position: absolute;
+  top: 50px; /* Adjust to align with icons */
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-color: #0073e6; /* Blue horizontal line */
+  z-index: -1;
 }
 
 .timeline-item {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
+  position: relative;
+  max-width: 180px;
+  gap: 10px;
 }
 
-.timeline-item:nth-child(even) {
-  flex-direction: column-reverse;
+.timeline-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.timeline-content {
-  max-width: 400px;
-  background-color: #f9f9f9;
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.timeline-date {
+  font-size: 14px;
+  font-weight: bold;
+  color: #0073e6;
+  margin-top: 10px;
 }
 
 .timeline-icon {
-  margin-top: 10px;
+  width: 50px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid #0073e6;
+}
+
+.timeline-line {
+  width: 4px;
+  height: 50px;
+  background-color: #0073e6;
+  margin: 10px 0;
+}
+
+.timeline-content {
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.timeline-content h3 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333333;
   margin-bottom: 10px;
 }
 
-.timeline-icon img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  border: 4px solid #0073e6;
+.timeline-content p {
+  font-size: 14px;
+  color: #666666;
+  margin: 0;
 }
+
+.timeline-item:hover .timeline-content {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.icon-image {
+  width: 48px;
+  height: 28px;
+}
+
 
   /* Locations Section */
   .tour-locations .location {

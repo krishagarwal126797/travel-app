@@ -1,123 +1,131 @@
-.footer{
-/* Footer Styling */
-.custom-footer {
-  background-color: #0B0B28;
-  color: #FFFFFF;
-  padding: 50px 0;
-}
+.footer {
+  /* Footer Styling */
+  .custom-footer {
+    background-color: #0B0B28;
+    color: #FFFFFF;
+    padding: 50px 0;
+  }
 
-/* Subscribe Section */
-.subscribe-section {
-  background-color: #4866F5;
-  border-radius: 20px;
-  padding: 30px;
-}
+  /* Subscribe Section */
+  .subscribe-section {
+    background-color: #4866F5;
+    border-radius: 20px;
+    padding: 30px;
+  }
 
-.subscribe-title {
-  font-size: 24px;
-  font-weight: bold;
-  color: white;
-}
+  .subscribe-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+  }
 
-.subscribe-form {
-  max-width: 500px;
-  margin: 20px auto;
-}
+  .subscribe-form {
+    max-width: 500px;
+    margin: 20px auto;
+  }
 
-.subscribe-icon {
-  background: white;
-  border: none;
-  padding: 8px 10px;
-  border-radius: 20px 0 0 20px;
-}
+  .subscribe-icon {
+    background: white;
+    border: none;
+    padding: 8px 10px;
+    border-radius: 20px 0 0 20px;
+  }
 
-.subscribe-input {
-  border: none;
-  border-radius: 0;
-  padding: 10px 15px;
-}
+  .subscribe-input {
+    border: none;
+    border-radius: 0;
+    padding: 10px 15px;
+  }
 
-.subscribe-button {
-  border-radius: 0 20px 20px 0;
-  background-color: #3247C7;
-  color: white;
-  font-weight: bold;
-}
+  .subscribe-button {
+    border-radius: 0 20px 20px 0;
+    background-color: #3247C7;
+    color: white;
+    font-weight: bold;
+  }
 
-.subscribe-button:hover {
-  background-color: #1F32A0;
-}
+  .subscribe-button:hover {
+    background-color: #1F32A0;
+  }
 
-/* Footer Links */
-.footer-heading {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 15px;
-}
+  /* Footer Links */
+  .footer-heading {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
 
-.footer-links {
-  list-style: none;
-  padding: 0;
-}
+  .footer-links {
+    list-style: none;
+    padding: 0;
+  }
 
-.footer-links li {
-  margin-bottom: 10px;
-  color: #A9A9A9;
-}
+  .footer-links li {
+    margin-bottom: 10px;
+    color: #A9A9A9;
+    cursor: pointer; /* Adds a clickable hand cursor */
+  }
 
-.footer-links a {
-  text-decoration: none;
-  color: inherit;
-}
+  .footer-links li:hover {
+    color: #4866F5; /* Highlights the text on hover */
+    font-weight: bold; /* Optional: Adds bold text for hover effect */
+  }
 
-.footer-links a:hover {
-  color: #4866F5;
-}
+  .footer-links a {
+    text-decoration: none;
+    color: inherit;
+  }
 
-/* Contact Icons */
-.contact-icon {
-  margin-right: 10px;
-}
+  .footer-links a:hover {
+    color: #4866F5;
+    text-decoration: underline; /* Optional: Adds underline to links on hover */
+  }
 
-/* Social Links */
-.social-links a {
-  margin-right: 15px;
-  font-size: 18px;
-  color: white;
-}
+  /* Contact Icons */
+  .contact-icon {
+    margin-right: 10px;
+  }
 
-.social-links a:hover {
-  color: #4866F5;
-}
+  /* Social Links */
+  .social-links a {
+    margin-right: 15px;
+    font-size: 18px;
+    color: white;
+    cursor: pointer; /* Adds a clickable hand cursor */
+  }
 
-/* Footer Bottom */
-.footer-bottom p {
-  margin: 0;
-  color: #A9A9A9;
-  font-size: 14px;
-}
+  .social-links a:hover {
+    color: #4866F5;
+  }
 
-/* Brand Section */
-.brand-logo {
-  display: flex;
-  align-items: center;
-}
+  /* Footer Bottom */
+  .footer-bottom p {
+    margin: 0;
+    color: #A9A9A9;
+    font-size: 14px;
+  }
 
-.brand-icon {
-  width: 40px;
-  height: 40px;
-  background-color: #4866F5;
-  border-radius: 50%;
-  margin-right: 10px;
-}
+  /* Brand Section */
+  .brand-logo {
+    display: flex;
+    align-items: center;
+  }
 
-.brand-title {
-  font-size: 22px;
-  font-weight: bold;
-}
+  .brand-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #4866F5;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
 
-.brand-description {
-  font-size: 14px;
-  color: #A9A9A9;
-}
+  .brand-title {
+    font-size: 22px;
+    font-weight: bold;
+  }
+
+  .brand-description {
+    font-size: 14px;
+    color: #A9A9A9;
+  }
 }
