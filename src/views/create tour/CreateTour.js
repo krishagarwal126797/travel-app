@@ -28,135 +28,157 @@ const CreateTour = () => {
     <section className="CreateTour">
       <NavbarComp />
 
-      <section id="header" className="header-section">
+      {/* Header Section */}
+      <header className="header-section" style={{
+        backgroundImage: `url('/assets/img/tour-header-bg.jpg')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        color: '#fff',
+        padding: '60px 20px',
+        textAlign: 'center'
+      }}>
         <div className="header-content">
-          <h2>Welcome to the Tour Creator</h2>
-          <p>Discover new destinations and meet new friends by creating your own tours.</p>
+          <h1>Plan Your Dream Adventure</h1>
+          <p>Turn your travel dreams into reality with our easy-to-use tour creation platform.</p>
+          <button
+            className="cta-button"
+            onClick={() => {
+              document.getElementById("cta-form").scrollIntoView({ behavior: "smooth" });
+            }}
+          >
+            Start Planning Now
+          </button>
         </div>
-      </section>
+      </header>
 
       <section id="cta-form" className="cta-form">
-        <div className="form-section">
-          <h2>Create Your Tour</h2>
-          <form onSubmit={handleSubmit}>
-            <div className="form-grid">
-              <div>
-                <label htmlFor="tourName">Tour Name:</label>
-                <input
-                  type="text"
-                  id="tourName"
-                  name="tourName"
-                  value={formData.tourName}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-
-              <div>
-                <label htmlFor="destination">Destination:</label>
-                <input
-                  type="text"
-                  id="destination"
-                  name="destination"
-                  value={formData.destination}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-
-              <div>
-                <label htmlFor="location">Starting Location:</label>
-                <input
-                  type="text"
-                  id="location"
-                  name="location"
-                  value={formData.location}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-
-              <div>
-                <label htmlFor="days">Number of Days:</label>
-                <input
-                  type="text"
-                  id="days"
-                  name="days"
-                  value={formData.days}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-
-              <div>
-                <label htmlFor="budget">Budget:</label>
-                <input
-                  type="text"
-                  id="budget"
-                  name="budget"
-                  value={formData.budget}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-
-              <div>
-                <label htmlFor="date">Start Date:</label>
-                <input
-                  type="date"
-                  id="date"
-                  name="date"
-                  value={formData.date}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-
-              <div>
-                <label htmlFor="travelMedium">Travel Medium:</label>
-                <select
-                  id="travelMedium"
-                  name="travelMedium"
-                  value={formData.travelMedium}
-                  onChange={handleChange}
-                  required
-                >
-                  <option value="" disabled>
-                    Select a medium
-                  </option>
-                  <option value="car">Car</option>
-                  <option value="bus">Bus</option>
-                  <option value="train">Train</option>
-                  <option value="airplane">Airplane</option>
-                  <option value="bike">Bike</option>
-                </select>
-              </div>
-            </div>
-
-            <div className="description-section">
-              <label htmlFor="description">Description:</label>
-              <textarea
-                id="description"
-                name="description"
-                value={formData.description}
-                onChange={handleChange}
-                rows="5"
-                required
-              ></textarea>
-            </div>
-
-            <button type="submit">Submit</button>
-          </form>
+  <div className="form-section">
+    <h2>Create Your Tour</h2>
+    <form onSubmit={handleSubmit}>
+      <div className="form-grid">
+        <div className="form-row">
+          <div className="form-group">
+            <label htmlFor="tourName">Tour Name:</label>
+            <input
+              type="text"
+              id="tourName"
+              name="tourName"
+              value={formData.tourName}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="destination">Destination:</label>
+            <input
+              type="text"
+              id="destination"
+              name="destination"
+              value={formData.destination}
+              onChange={handleChange}
+              required
+            />
+          </div>
         </div>
 
-        <div className="image-section">
-          <img
-            src="/assets/img/createtour1.png"
-            alt="Tour Visual"
-            className="tour-image"
-          />
+        <div className="form-row">
+          <div className="form-group">
+            <label htmlFor="location">Starting Location:</label>
+            <input
+              type="text"
+              id="location"
+              name="location"
+              value={formData.location}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="days">Number of Days:</label>
+            <input
+              type="text"
+              id="days"
+              name="days"
+              value={formData.days}
+              onChange={handleChange}
+              required
+            />
+          </div>
         </div>
-      </section>
+
+        <div className="form-row">
+          <div className="form-group">
+            <label htmlFor="budget">Budget:</label>
+            <input
+              type="text"
+              id="budget"
+              name="budget"
+              value={formData.budget}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="date">Start Date:</label>
+            <input
+              type="date"
+              id="date"
+              name="date"
+              value={formData.date}
+              onChange={handleChange}
+              required
+            />
+          </div>
+        </div>
+
+        <div className="form-row">
+          <div className="form-group full-width">
+            <label htmlFor="travelMedium">Travel Medium:</label>
+            <select
+              id="travelMedium"
+              name="travelMedium"
+              value={formData.travelMedium}
+              onChange={handleChange}
+              required
+            >
+              <option value="" disabled>
+                Select a medium
+              </option>
+              <option value="car">Car</option>
+              <option value="bus">Bus</option>
+              <option value="train">Train</option>
+              <option value="airplane">Airplane</option>
+              <option value="bike">Bike</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div className="description-section">
+        <label htmlFor="description">Description:</label>
+        <textarea
+          id="description"
+          name="description"
+          value={formData.description}
+          onChange={handleChange}
+          rows="5"
+          required
+        ></textarea>
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <div className="image-section">
+    <img
+      src="/assets/img/createtour1.png"
+      alt="Tour Visual"
+      className="tour-image"
+    />
+  </div>
+</section>
+
 
       <section id="features" className="features-section">
         <h2>Why Create a Tour?</h2>
@@ -171,7 +193,7 @@ const CreateTour = () => {
           </div>
           <div className="feature">
             <h3>Flexible Scheduling</h3>
-            <p>Plan your tours at your convenience.</p>
+            <p>Discover unique places and hidden gems around the world.</p>
           </div>
         </div>
       </section>
