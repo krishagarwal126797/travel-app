@@ -51,26 +51,44 @@
   }
   
   /* Project Item Body Section */
-  .project-body {
-    padding: 3rem 2rem;
+  .project-card {
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    border: 1px solid #ddd; /* Optional: Add a border for card effect */
+    border-radius: 8px; /* Optional: Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional: Shadow for depth */
+  }
+  
+  .card-image {
+    height: 250px;
+    width: 500px;
+    border-radius: 8px; /* Optional: Rounded corners for the image */
+    margin-right: 2rem; /* Space between image and text */
+  }
+  
+  .card-content {
+    text-align: left; /* Align text to the left */
+  }
+  
+  .card-content h2 {
     text-align: center;
+    font-size: 50px;
+    color: green;
+    margin-bottom: 1rem;
   }
   
-  .project-body h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-    color: #333;
-  }
-  
-  .project-body p {
-    font-size: 1.2rem;
-    line-height: 1.8;
+  .card-content p {
+    font-size: 1rem; /* Adjust font size as needed */
+    line-height: 1.6;
     color: #555;
   }
   
   /* Feature Section */
-  .feature-section {
-    padding: 2rem 2rem;
+  .feature-card {
+    display: flex;
+    align-items: center;
+    padding: 2rem;
     background: linear-gradient(135deg, #f8f9fa, #e0e7f1);
     margin: 2rem 0;
     border-radius: 10px;
@@ -78,18 +96,22 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
   
-  .feature-section:hover {
+  .feature-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   }
   
-  .feature-section h3 {
+  .card-content {
+    text-align: left; /* Align text to the left */
+  }
+  
+  .card-content h3 {
     font-size: 2rem;
     margin-bottom: 1rem;
     color: #007bff;
   }
   
-  .feature-section p {
+  .card-content p {
     font-size: 1.1rem;
     line-height: 1.7;
     color: #666;

@@ -22,67 +22,73 @@ const DestinationDetailsPage = () => {
           </section>
 
           {/* Project Item Body Section */}
-          <section className="project-body">
-            <h2>About Paris</h2>
-            <img
-              src="/assets/img/h17.jpg"
-              alt="About Paris"
-              className="section-image"
-            />
-            <p>
-              Paris, the capital of France, is renowned for its stunning
-              architecture, rich culture, and iconic landmarks. From the Eiffel
-              Tower to the Louvre Museum, Paris offers a plethora of experiences
-              for every traveler. Enjoy romantic strolls along the Seine River,
-              indulge in gourmet French cuisine, and explore vibrant
-              neighborhoods like Montmartre and Le Marais.
-            </p>
-          </section>
+          <section className="project-card">
+  <img
+    src="/assets/img/h17.jpg"
+    alt="About Paris"
+    className="card-image"
+  />
+  <div className="card-content">
+    <h2>About Paris</h2>
+    <p>
+      Paris, the capital of France, is renowned for its stunning
+      architecture, rich culture, and iconic landmarks. From the Eiffel
+      Tower to the Louvre Museum, Paris offers a plethora of experiences
+      for every traveler. Enjoy romantic strolls along the Seine River,
+      indulge in gourmet French cuisine, and explore vibrant
+      neighborhoods like Montmartre and Le Marais.
+    </p>
+  </div>
+</section>
 
           {/* Feature Section 1 */}
-          <section className="feature-section">
-            <h3>Must-See Attraction: Eiffel Tower</h3>
-            <img
-              src="/assets/img/h18.jpg"
-              alt="Eiffel Tower"
-              className="section-image"
-            />
-            <p>
-              No visit to Paris is complete without a trip to the Eiffel Tower.
-              Ascend to the top for panoramic views of the city and capture
-              unforgettable memories.
-            </p>
-          </section>
-
-          {/* Feature Section 2 */}
-          <section className="feature-section">
-            <h3>Cultural Highlights: Art and Museums</h3>
-            <img
-              src="/assets/img/h19.jpg"
-              alt="Louvre Museum"
-              className="section-image"
-            />
-            <p>
-              Paris is home to some of the world's best museums, including the
-              Louvre and Musée d'Orsay. Dive into art, history, and culture in
-              every corner of the city.
-            </p>
-          </section>
-
-          {/* Feature Section 3 */}
-          <section className="feature-section">
-            <h3>Local Cuisine: A Culinary Paradise</h3>
-            <img
-              src="/assets/img/h20.jpg"
-              alt="French Cuisine"
-              className="section-image"
-            />
-            <p>
-              Indulge in French delicacies like croissants, escargot, and coq au
+          <section className="feature-card">
+  <img
+    src="/assets/img/h18.jpg"
+    alt="Eiffel Tower"
+    className="card-image"
+  />
+  <div className="card-content">
+    <h3>Must-See Attraction: Eiffel Tower</h3>
+    <p>
+      No visit to Paris is complete without a trip to the Eiffel Tower.
+      Ascend to the top for panoramic views of the city and capture
+      unforgettable memories.
+    </p>
+  </div>
+</section>
+ {/* Feature Section 2 */}
+<section className="feature-card">
+  <img
+    src="/assets/img/h19.jpg"
+    alt="Eiffel Tower"
+    className="card-image"
+  />
+  <div className="card-content">
+    <h3>Cultural Highlights: Art and Museums</h3>
+    <p>
+    Paris is home to some of the world's best museums, including the 
+    Louvre and Musée d'Orsay. Dive into art, history, and culture in 
+    every corner of the city.
+    </p>
+  </div>
+</section>
+ {/* Feature Section 1 */}
+<section className="feature-card">
+  <img
+    src="/assets/img/h20.jpg"
+    alt="Eiffel Tower"
+    className="card-image"
+  />
+  <div className="card-content">
+    <h3>Local Cuisine: A Culinary Paradise</h3>
+    <p>
+    Indulge in French delicacies like croissants, escargot, and coq au
               vin. Don't forget to try the exquisite patisseries and
               world-famous wines.
-            </p>
-          </section>
+    </p>
+  </div>
+</section>
 
           {/* Testimonial Section */}
           <section className="testimonial-section">
