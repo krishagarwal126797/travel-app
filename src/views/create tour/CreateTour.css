@@ -1,4 +1,7 @@
-
+.CreateTour{
+*{
+  scroll-behavior: smooth;
+}
 .header-section {
   background-size: cover;
   background-position: center;
@@ -178,4 +181,5 @@
 .feature:hover {
   border: 1px solid black;
   transform: scale(1.05);
+}
 }

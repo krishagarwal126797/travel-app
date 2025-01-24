@@ -1,3 +1,4 @@
+.Login{
 /* src/views/LoginPage.css */
 
 .login-container {
@@ -316,4 +317,5 @@ margin-left:10px;
 .register-link a:hover {
   text-decoration: none;
   color: red; /* Color on hover */
+}
 }
