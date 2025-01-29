@@ -1,7 +1,9 @@
 import React from "react";
 import NavbarComp from "../Navbar";
 import Footer from "../footer";
-import "./testimonial.css"
+import "./testimonial.css";
+import { useNavigate } from "react-router-dom";
+import { use } from "react";
 
 // Testimonials Data
 const testimonialsData1 = [
@@ -85,6 +87,7 @@ const TestimonialCard = ({ photo, name, text, location }) => {
 };
 
 const CTASection = () => {
+  const navigate = useNavigate();
   return (
     <section className="cta-section">
       <div className="cta-content">
@@ -94,8 +97,8 @@ const CTASection = () => {
           Or, if you're ready for your next adventure, sign up today and let us help you create unforgettable memories.
         </p>
         <div className="cta-buttons">
-          <button className="cta-button share-button">Share Your Experience</button>
-          <button className="cta-button sign-up-button">Start Your Journey</button>
+          <button className="cta-button share-button" onClick={() => navigate("/reviewform")}>Share Your Experience</button>
+          <button className="cta-button sign-up-button" onClick={() => navigate("/createtour")}>Start Your Journey</button>
         </div>
       </div>
     </section>

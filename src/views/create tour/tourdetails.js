@@ -2,8 +2,10 @@ import React from "react";
 import "./tourdetalis.css";
 import NavbarComp from "../Navbar";
 import Footer from "../footer";
+import { useNavigate } from "react-router-dom";
 
 const TourDetailsPage = () => {
+  const navigate = useNavigate();
   return (
     <div>
         <NavbarComp />
@@ -50,7 +52,7 @@ const TourDetailsPage = () => {
 <section class="tour-timeline">
   <h2 class="section-title">Tour Timeline</h2>
   <div class="timeline-container">
-    <div class="timeline-item">
+    <div class="timeline-item1">
       <div class="timeline-top">
         <p class="timeline-date">01 Jan 2025</p>
         <div class="timeline-icon">
@@ -62,7 +64,7 @@ const TourDetailsPage = () => {
         <p>Arrival in Zurich, Switzerland. Welcome dinner and orientation.</p>
       </div>
     </div>
-    <div class="timeline-item">
+    <div class="timeline-item1">
       <div class="timeline-top">
         <p class="timeline-date">02 Jan 2025</p>
         <div class="timeline-icon">
@@ -76,7 +78,7 @@ const TourDetailsPage = () => {
         <p>Guided trek through the breathtaking Alps. Visit local villages.</p>
       </div>
     </div>
-    <div class="timeline-item">
+    <div class="timeline-item1">
       <div class="timeline-top">
         <p class="timeline-date">02 Jan 2025</p>
         <div class="timeline-icon">
@@ -88,7 +90,7 @@ const TourDetailsPage = () => {
         <p>Guided trek through the breathtaking Alps. Visit local villages.</p>
       </div>
     </div>
-    <div class="timeline-item">
+    <div class="timeline-item1">
       <div class="timeline-top">
         <p class="timeline-date">02 Jan 2025</p>
         <div class="timeline-icon">
@@ -100,7 +102,7 @@ const TourDetailsPage = () => {
         <p>Guided trek through the breathtaking Alps. Visit local villages.</p>
       </div>
     </div>
-    <div class="timeline-item">
+    <div class="timeline-item1">
       <div class="timeline-top">
         <p class="timeline-date">02 Jan 2025</p>
         <div class="timeline-icon">
@@ -114,9 +116,6 @@ const TourDetailsPage = () => {
     </div>
   </div>
 </section>
-
-
-
       {/* Locations Section */}
       <section className="tour-locations">
         <h2 className="section-title">Tour Destinations</h2>
@@ -155,8 +154,8 @@ const TourDetailsPage = () => {
       <section className="tour-cta">
         <h2>Ready to Explore?</h2>
         <p>Book your tour or get in touch with us for more details.</p>
-        <button className="btn-primary">Book Now</button>
-        <button className="btn-secondary">Contact Us</button>
+        <button className="btn-primary" onClick={() => navigate("/createtour")}>Book Now</button>
+        <button className="btn-secondary" onClick={() => navigate("/contact")}>Contact Us</button>
       </section>
 
       {/* CTA Form Section */}

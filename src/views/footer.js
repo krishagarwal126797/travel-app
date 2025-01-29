@@ -66,7 +66,6 @@ const Footer = () => {
                 <li onClick={() => navigate("/blog")}>Blog</li>
                 <li onClick={() => navigate("/testimonial")}>Testimonials</li>
                 <li onClick={() => navigate("/review")}>Reviews</li>
-                <li onClick={() => navigate("/reviewform")}>Review Form</li>
                 <li onClick={() => navigate("/privacy")}>Privacy Policy</li>
                 <li onClick={() => navigate("/terms")}>Terms of Service</li>
                 <li onClick={() => navigate("/pricing")}>Pricing</li>

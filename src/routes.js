@@ -23,7 +23,9 @@ import TourDetailsPage from './views/create tour/tourdetails';
 import ReviewsPage from './views/review';
 import Reviewsform from './views/reviewform';
 import AdminLogin from './views/AdminLogin';
+import BlogPostPage from './views/blog/blogpost';
 import HowItWorks from './views/How_itsWorking/itsWorking';
+import CreateBlog from './views/blog/createblog';
 // Check if user is authenticated
 const isAuthenticated = () => {
   const user = localStorage.getItem('user');
@@ -67,6 +69,8 @@ const routes = [
   { path: '/review', component: ReviewsPage },
   { path: '/reviewform', component: Reviewsform },
   { path: '/How_itsWorking', component: HowItWorks },
+  { path: '/blogpost', component: BlogPostPage },
+  { path: '/blogcreate', component: CreateBlog },
 ];
 
 export default routes;

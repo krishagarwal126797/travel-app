@@ -2,8 +2,10 @@ import React from "react";
 import NavbarComp from "../Navbar";
 import Footer from "../footer";
 import "./tour_listing.css";
+import { useNavigate } from "react-router-dom";
 
 const TourListing = () => {
+     const navigate = useNavigate();
   return (
     <div>
         <NavbarComp />
@@ -48,7 +50,9 @@ const TourListing = () => {
                   img: "/assets/img/h02.jpg",
                 },
               ].map((tour) => (
-                <div key={tour.id} className="tour-card">
+                // <div key={tour.id} className="tour-card" onClick={() => navigate(`/tourdetails/${tour.id}`)}>
+                  <div key={tour.id} className="tour-card" onClick={() => navigate("/tourdetails")}>
+                  <div className="tour-card-image"></div>
                   <div className="tour-card-image">
                     <img src={tour.img} alt={tour.destination} />
                   </div>
@@ -97,7 +101,7 @@ const TourListing = () => {
           {/* CTA Section */}
           <section className="cta">
             <h2>Ready to Start Your Adventure?</h2>
-            <button className="cta-btn">Create an Account</button>
+            <button className="cta-btn" onClick={() => navigate("/createtour")}>Create Your Tour</button>
           </section>
         </div>
       </section>

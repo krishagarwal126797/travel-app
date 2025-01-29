@@ -140,14 +140,6 @@ const Pricing = () => {
         </div>
       </Container>
     </section>
-
-      {/* CTA Section */}
-      <section className="cta-section text-center">
-        <h2>Ready to Get Started?</h2>
-        <p>Sign up now and take your experience to the next level!</p>
-        <Button variant="success">Sign Up Now</Button>
-      </section>
-
       {/* Testimonial Section */}
       <section className="testimonial-section" style={{ margin: '30px', backgroundColor: '#f9f9f9', padding: '50px 0' }}>
   <h2 className="text-center mb-5" style={{ fontFamily: 'Poppins, sans-serif', color: '#333', fontWeight: '600' }}>

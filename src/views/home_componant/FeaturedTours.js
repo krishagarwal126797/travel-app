@@ -2,8 +2,11 @@ import React from "react";
 import "../home.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import { useNavigate } from "react-router-dom";
+
 
 const PopularDestinations = () => {
+   const navigate = useNavigate();
   const destinations = [
     { id: 1, name: "Rialto Bridge", img: "/assets/img/h01.jpg", location: "VENICE, ITALY", price: "$299", rating: 4.9, reviews: "1.7k Reviews" },
     { id: 2, name: "Mountain Hike", img: "/assets/img/h02.jpg", location: "SWISS ALPS", price: "$499", rating: 4.8, reviews: "2.1k Reviews" },
@@ -61,7 +64,7 @@ const PopularDestinations = () => {
         </div>
         {/* Centered See More Button */}
         <div className="text-center mt-4">
-          <button className="btn see-more-btn">See More</button>
+          <button className="btn see-more-btn" onClick={() => navigate("/destination")}>See More</button>
         </div>
       </div>
     </section>

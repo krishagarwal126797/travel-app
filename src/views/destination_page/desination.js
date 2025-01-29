@@ -2,8 +2,10 @@ import React from "react";
 import NavbarComp from "../Navbar";
 import Footer from "../footer";
 import "./destination.css";
+import { useNavigate } from "react-router-dom";
 
 const DestinationsPage = () => {
+  const navigate = useNavigate();
   return (
     <div>
         <NavbarComp/>
@@ -21,12 +23,10 @@ const DestinationsPage = () => {
       <section className="portfolio-section">
         <h2>Our Featured Destinations</h2>
         <div className="portfolio-list">
-          <div className="portfolio-item">
-          <a href="/destdetails" className="portfolio-item">
+          <div className="portfolio-item"  onClick={() => navigate("/destdetails")}> 
   <img src="/assets/img/h07.jpg" alt="Destination 1" />
   <h3>Paris</h3>
   <p>The city of lights and love, offering world-class art, fashion, and food.</p>
-</a>
 
           </div>
           <div className="portfolio-item">
@@ -75,7 +75,7 @@ const DestinationsPage = () => {
         <p>
           Don't wait to explore the world. Check out destination details and book your adventure now!
         </p>
-        <button className="cta-button">Explore Now</button>
+        <button className="cta-button" onClick={() => navigate("/createtour")}>Explore Now</button>
       </section>
     </div>
     </section>

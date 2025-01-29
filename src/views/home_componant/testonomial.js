@@ -3,8 +3,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import { useNavigate } from 'react-router-dom';
 
 const Testimonials = () => {
+  const navigate = useNavigate();
   const testimonials = [
     {
       text: "This platform helped me meet amazing travel buddies! The user-friendly interface and features make it exceptional.",
@@ -35,12 +37,6 @@ const Testimonials = () => {
       author: "Michael Brown",
       company: "travelhero.com",
       image: "/assets/img/h03.jpg",
-    },
-    {
-      text: "Amazing experience! Found great travel deals here and made some great friends along the way.",
-      author: "Sarah Johnson",
-      company: "budgettravel.com",
-      image: "https://via.placeholder.com/100",
     },
   ];
 
@@ -75,23 +71,27 @@ const Testimonials = () => {
     <div className="testimonial-section" style={{ background: "#00222E", color: "#fff", padding: "50px 0" }}>
       <div className="container">
         <h2 className="text-center mb-5">What Our Customers Are Saying About Us</h2>
-        <Slider {...settings}>
+        <Slider {...settings} className="testimonial-slider"> 
           {testimonials.map((item, index) => (
-            <div key={index} className="testimonial-card text-center p-4">
-              <div className="image-container mb-3">
-                <img
-                  src={item.image}
-                  alt={item.author}
-                  className="rounded-circle"
-                  style={{ width: "100px", height: "100px", objectFit: "cover", border: "4px solid #FF9F43" }}
-                />
+            <div key={index} className="testimonial-slide px-3" onClick={() => navigate("/testimonial")}>
+              <div className="testimonial-card text-center p-4" style={{ background: "#fff", borderRadius: "10px", boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)" }}>
+                <div className="image-container mb-3">
+                  <img
+                    src={item.image}
+                    alt={item.author}
+                    className="rounded-circle"
+                    style={{ width: "100px", height: "100px", objectFit: "cover", border: "4px solid #FF9F43" }}
+                  />
+                </div>
+                <blockquote className="blockquote">
+                  <p style={{ fontSize: "1rem", minHeight: "100px", color:"#020d50" }}>
+                    "{item.text}"
+                  </p>
+                  <footer className="blockquote-footer text-light mt-3">
+                    {item.author} <cite>{item.company}</cite>
+                  </footer>
+                </blockquote>
               </div>
-              <blockquote className="blockquote">
-                <p style={{ fontSize: "1rem", minHeight: "100px", color:"#020d50"}}>"{item.text}"</p>
-                <footer className="blockquote-footer text-light mt-3">
-                  {item.author} <cite>{item.company}</cite>
-                </footer>
-              </blockquote>
             </div>
           ))}
         </Slider>

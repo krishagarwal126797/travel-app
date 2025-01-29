@@ -60,7 +60,7 @@ const NavbarComp = () => {
                 </div>
                 <Dropdown isOpen={dropdownOpen} toggle={toggle} className="dropdown">
                   <DropdownMenu>
-                    <DropdownItem onClick={() => navigate("/our-story")}>Our Story</DropdownItem>
+                    <DropdownItem onClick={() => navigate("/mytour")}>Our Tour</DropdownItem>
                     <DropdownItem onClick={() => navigate("/team")}>Team</DropdownItem>
                     <DropdownItem onClick={() => navigate("/careers")}>Careers</DropdownItem>
                   </DropdownMenu>

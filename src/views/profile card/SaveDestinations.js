@@ -1,10 +1,11 @@
 // import React from 'react'
 import React, { useState } from 'react';
 import "./SaveDestinations.css";
-import NavbarComp from '../Navbar'
-import Footer from '../footer'
-
+import NavbarComp from '../Navbar';
+import Footer from '../footer';
+import { useNavigate } from 'react-router-dom';
 const SaveDestinations = () => {
+  const navigate = useNavigate();
 
   const destinations = [
     { id: 1, name: "Paris", description: "The city of light and love.", img: "/assets/img/h16.jpg" },
@@ -67,7 +68,7 @@ const SaveDestinations = () => {
       <h2 className="gallery-title">Your Saved Destinations</h2>
       <div className="gallery-grid">
         {destinations.map((destination) => (
-          <div className="gallery-item" key={destination.id}>
+          <div className="gallery-item" key={destination.id} onClick={() => navigate("/destdetails")}>
             <img
               src={destination.img}
               alt={destination.name}
@@ -104,8 +105,8 @@ const SaveDestinations = () => {
           Explore new destinations or start planning your next tour from your saved list. Adventure awaits!
         </p>
         <div className="cta-buttons">
-          <button className="cta-button explore-btn">Explore Destinations</button>
-          <button className="cta-button plan-btn">Plan a Tour</button>
+          <button className="cta-button explore-btn" onClick={()=> navigate("/destination")}>Explore Destinations</button>
+          <button className="cta-button plan-btn" onClick={() => navigate("/createtour")}>Plan a Tour</button>
         </div>
       </div>
       <img

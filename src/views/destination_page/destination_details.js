@@ -2,8 +2,10 @@ import React from "react";
 import NavbarComp from "../Navbar";
 import Footer from "../footer";
 import "./destination_details.css";
+import { useNavigate } from "react-router-dom";
 
 const DestinationDetailsPage = () => {
+  const navigate = useNavigate();
   return (
     <div>
       <NavbarComp />
@@ -167,7 +169,7 @@ const DestinationDetailsPage = () => {
               Add Paris to your tour or join an existing group tour to this
               magical city!
             </p>
-            <button className="cta-button">Plan Your Trip</button>
+            <button className="cta-button" onClick={() => navigate("/createtour")}> Plan Your Trip</button>
           </section>
         </div>
       </section>

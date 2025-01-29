@@ -1,6 +1,7 @@
-/* General Styles */
+
 .tourdetails{
-  
+
+
   .tour-details-page {
     max-width: 1200px;
     margin: 0 auto;
@@ -110,7 +111,7 @@
   z-index: -1;
 }
 
-.timeline-item {
+.timeline-item1 {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -172,9 +173,10 @@
   margin: 0;
 }
 
-.timeline-item:hover .timeline-content {
+.timeline-item1:hover .timeline-content {
   transform: scale(1.05);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
 }
 
 .icon-image {

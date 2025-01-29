@@ -1,9 +1,11 @@
 import React from 'react'
 import "./MyTour.css";
-import NavbarComp from '../Navbar'
-import Footer from '../footer'
+import NavbarComp from '../Navbar';
+import Footer from '../footer';
+import { useNavigate } from "react-router-dom";
 
 const MyTour = () => {
+   const navigate = useNavigate();
   return (
     <div>
       <NavbarComp />
@@ -66,7 +68,8 @@ const MyTour = () => {
                   img: "/assets/img/h02.jpg",
                 },
               ].map((tour) => (
-                <div key={tour.id} className="tour-card">
+                <div key={tour.id} className="tour-card" onClick={() => navigate("/tourdetails")}>
+                {/* <div key={tour.id} className="tour-card"> */}
                   <div className="tour-card-image">
                     <img src={tour.img} alt={tour.destination} />
                   </div>

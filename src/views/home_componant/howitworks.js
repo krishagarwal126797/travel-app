@@ -1,8 +1,10 @@
 import React from "react";
 import "./ShortStory.css";
 import { StepIcon } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 const ShortStory = () => {
+   const navigate = useNavigate();
   return (
     <section className="short_story">
     <div className="short-story-container">
@@ -17,7 +19,7 @@ const ShortStory = () => {
         <p>
           Our aim is to make global corporate travel management more personalized and seamless, and we do this through a network of exceptional local agencies that are not only leaders in their own respective markets...
         </p>
-        <button className="see-more-btn">See more</button>
+        <button className="see-more-btn" onClick={() => navigate("/blog")}>See more</button>
       </div>
     </div>
     </section>

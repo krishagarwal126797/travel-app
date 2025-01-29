@@ -141,49 +141,6 @@ const ProfilePage = () => {
           </div>
           <ReviewsPage />
           <Reviewsform />
-        {/* <div class="review-section">
-          <h2 class="section-title">Customer Reviews</h2>
-
-
-          <div class="reviews">
-            <div class="review">
-              <div class="review-header">
-                <span class="user-name">John Doe</span>
-                <span class="stars">⭐⭐⭐⭐⭐</span>
-              </div>
-              <p class="review-text">Great experience! Highly recommended.</p>
-            </div>
-
-            <div class="review">
-              <div class="review-header">
-                <span class="user-name">Jane Smith</span>
-                <span class="stars">⭐⭐⭐⭐</span>
-              </div>
-              <p class="review-text">Good service, but delivery was slightly delayed.</p>
-            </div>
-          </div> */}
-
-          {/* <!-- Review Form --> */}
-          {/* <form class="review-form">
-            <h3>Write a Review</h3>
-            <label for="name">Your Name</label>
-            <input type="text" id="name" placeholder="Enter your name" required />
-
-            <label for="rating">Rating</label>
-            <select id="rating">
-              <option value="5">5 Stars</option>
-              <option value="4">4 Stars</option>
-              <option value="3">3 Stars</option>
-              <option value="2">2 Stars</option>
-              <option value="1">1 Star</option>
-            </select>
-
-            <label for="review">Your Review</label>
-            <textarea id="review" rows="4" placeholder="Write your review here" required></textarea>
-
-            <button type="submit">Submit Review</button>
-          </form> */}
-        {/* </div> */}
 
         <div class="timeline-section">
           <h2 class="section-title">Our Journey</h2>
