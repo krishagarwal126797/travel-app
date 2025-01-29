@@ -1,0 +1,83 @@
+.about{
+.about-us-container {
+    background-color: #f8f9fc;
+    padding: 50px 0;
+    font-family: "Arial", sans-serif;
+  }
+  
+  .hero-section {
+    margin-bottom: 50px;
+  }
+  
+  .hero-section h5 {
+    color: #6c757d;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .hero-section h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #343a40;
+  }
+  
+  .highlight {
+    color: #4caf50;
+  }
+  
+  .hero-section p {
+    font-size: 1rem;
+    color: #6c757d;
+  }
+  
+  .hero-section .btn-primary {
+    background-color: #4caf50;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+  
+  .hero-section .btn-primary:hover {
+    background-color: #388e3c;
+  }
+  
+  .img-section img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .ai-powered-section {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .ai-powered-section h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #343a40;
+  }
+  
+  .ai-powered-section p {
+    color: #6c757d;
+  }
+  
+  .statistics-section {
+    padding: 40px 0;
+  }
+  
+  .statistics-section h3 {
+    font-size: 2rem;
+    color: #4caf50;
+    font-weight: bold;
+  }
+  
+  .statistics-section p {
+    font-size: 1rem;
+    color: #6c757d;
+  }
+}
