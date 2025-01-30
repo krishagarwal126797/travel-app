@@ -1,19 +1,10 @@
 import React, { useState } from "react";
-import { db,auth,provider } from "../firebase/firebase";
+import { db, auth, provider } from "../firebase/firebase";
 import { createUserWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 import { setDoc, doc } from "firebase/firestore";
 import { Card, CardContent, CardActions, Button, TextField, Typography, Switch } from "@mui/material";
-import { styled } from "@mui/system";
 import { FaGoogle } from "react-icons/fa";
 import "./Register.css";
-
-const ThemeToggle = styled("div")(({ theme }) => ({
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-  cursor: "pointer",
-  marginBottom: "20px",
-}));
 
 const Register = () => {
   const [formData, setFormData] = useState({
@@ -22,7 +13,7 @@ const Register = () => {
     password: "",
     phoneNumber: "",
     city: "",
-    state: "", // New state field
+    state: "",
   });
 
   const [theme, setTheme] = useState("light");
@@ -47,7 +38,7 @@ const Register = () => {
         Password: password,
         Phone_number: Number(phoneNumber),
         City: city,
-        State: state, // Save new state field
+        State: state,
       });
       alert("User registered successfully!");
     } catch (error) {
@@ -64,7 +55,7 @@ const Register = () => {
         Email: user.email,
         Phone_number: user.phoneNumber || "",
         City: "",
-        State: "", // Default empty for Google SignUp
+        State: "",
       });
       alert("User registered with Google successfully!");
     } catch (error) {
@@ -74,82 +65,89 @@ const Register = () => {
 
   return (
     <div className={`register-container ${theme}`}>
-      <ThemeToggle onClick={toggleTheme}>
-        <Switch checked={theme === "dark"} />
+      <div className="background-animation"></div>
+      <div className="theme-toggle">
+        <Switch checked={theme === "dark"} onChange={toggleTheme} />
         <Typography>{theme === "light" ? "Dark Mode" : "Light Mode"}</Typography>
-      </ThemeToggle>
+      </div>
       <Card className={`register-card ${theme}`}>
         <CardContent>
           <Typography variant="h5" component="div" className="register-title">
             Create Your Account
           </Typography>
           <form onSubmit={handleRegister}>
-            <TextField
-              label="Username"
-              name="username"
-              variant="outlined"
-              fullWidth
-              margin="normal"
-              onChange={handleInputChange}
-              required
-            />
-            <TextField
-              label="Email"
-              name="email"
-              type="email"
-              variant="outlined"
-              fullWidth
-              margin="normal"
-              onChange={handleInputChange}
-              required
-            />
-            <TextField
-              label="Password"
-              name="password"
-              type="password"
-              variant="outlined"
-              fullWidth
-              margin="normal"
-              onChange={handleInputChange}
-              required
-            />
-            <TextField
-              label="Phone Number"
-              name="phoneNumber"
-              variant="outlined"
-              fullWidth
-              margin="normal"
-              onChange={handleInputChange}
-              required
-            />
-            <TextField
-              label="City"
-              name="city"
-              variant="outlined"
-              fullWidth
-              margin="normal"
-              onChange={handleInputChange}
-              required
-            />
-            {/* New State Input Field */}
-            <TextField
-              label="State"
-              name="state"
-              variant="outlined"
-              fullWidth
-              margin="normal"
-              onChange={handleInputChange}
-              required
-            />
+            <div className="input-row">
+              <TextField
+                label="Username"
+                name="username"
+                variant="outlined"
+                fullWidth
+                margin="normal"
+                onChange={handleInputChange}
+                required
+              />
+              <TextField
+                label="Phone Number"
+                name="phoneNumber"
+                variant="outlined"
+                fullWidth
+                margin="normal"
+                onChange={handleInputChange}
+                required
+              />
+            </div>
+            <div className="input-row">
+              <TextField
+                label="Email"
+                name="email"
+                type="email"
+                variant="outlined"
+                fullWidth
+                margin="normal"
+                onChange={handleInputChange}
+                required
+              />
+              <TextField
+                label="City"
+                name="city"
+                variant="outlined"
+                fullWidth
+                margin="normal"
+                onChange={handleInputChange}
+                required
+              />
+            </div>
+            <div className="input-row">
+              <TextField
+                label="Password"
+                name="password"
+                type="password"
+                variant="outlined"
+                fullWidth
+                margin="normal"
+                onChange={handleInputChange}
+                required
+              />
+              <TextField
+                label="State"
+                name="state"
+                variant="outlined"
+                fullWidth
+                margin="normal"
+                onChange={handleInputChange}
+                required
+              />
+            </div>
             <CardActions className="register-actions">
               <Button type="submit" variant="contained" color="primary" fullWidth>
-                Register
+                Sign Up
               </Button>
               <Button
                 startIcon={<FaGoogle />}
                 variant="outlined"
                 color="secondary"
                 fullWidth
+                className="google-signup"
                 onClick={handleGoogleSignUp}
               >
                 Sign Up with Google

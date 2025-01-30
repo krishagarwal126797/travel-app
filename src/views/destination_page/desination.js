@@ -24,18 +24,18 @@ const DestinationsPage = () => {
         <h2>Our Featured Destinations</h2>
         <div className="portfolio-list">
           <div className="portfolio-item"  onClick={() => navigate("/destdetails")}> 
-  <img src="/assets/img/h07.jpg" alt="Destination 1" />
+  <img src="/assets/img/h16.jpg" alt="Destination 1" />
   <h3>Paris</h3>
   <p>The city of lights and love, offering world-class art, fashion, and food.</p>
 
           </div>
           <div className="portfolio-item">
-            <img src="/assets/img/h07.jpg" alt="Destination 2" />
+            <img src="/assets/img/ind2.jpeg" alt="Destination 2" />
             <h3>Bali</h3>
             <p>A tropical paradise with stunning beaches, lush landscapes, and vibrant culture.</p>
           </div>
           <div className="portfolio-item">
-            <img src="/assets/img/h07.jpg" alt="Destination 3" />
+            <img src="/assets/img/ind3.jpg" alt="Destination 3" />
             <h3>Tokyo</h3>
             <p>Experience the perfect blend of tradition and futuristic modernity in Japan's capital.</p>
           </div>

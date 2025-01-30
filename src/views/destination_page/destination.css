@@ -12,9 +12,15 @@
   .header-section {
     text-align: center;
     padding: 4rem 2rem;
-    background-color: #007bff;
+    background-image: url(/public/assets/img/ind1.avif);
+    background-size: cover;  /* Ensures the image covers the entire section */
+    background-position: center;  /* Centers the image */
+    background-repeat: no-repeat;  /* Prevents image repetition */
     color: #fff;
-  }
+   height: 300px;
+
+}
+
   
   .header-section h1 {
     font-size: 2.5rem;

@@ -1,51 +1,158 @@
+/* Fullscreen container with animated background */
 .register-container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  padding: 20px;
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+  background: url("/public/assets/login.jpg") no-repeat center center/cover; /* Ensure full background */
+  background-size: cover;
   transition: background-color 0.3s ease;
 }
 
+/* Background Image with Blur Effect */
+.background-animation {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("/public/assets/login.jpg") no-repeat center center/cover;
+  filter: blur(5px);
+  z-index: -1;
+}
+
+/* Dark and Light Theme */
 .register-container.light {
-  background-color: #f0f4f8;
-  color: #333;
+  background: rgba(255, 255, 255, 0.6);
 }
 
 .register-container.dark {
-  background-color: #1e1e1e;
-  color: #fff;
+  background: rgba(0, 0, 0, 0.6);
 }
 
+/* Floating Glassmorphism Effect */
 .register-card {
   max-width: 400px;
   width: 100%;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  padding: 30px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  backdrop-filter: blur(10px);
+  transition: all 0.5s ease-in-out;
 }
 
-.register-card.light {
-  background-color: #fff;
-  color: #333;
-}
-
+/* Dark Mode Card */
 .register-card.dark {
-  background-color: #333;
+  background: rgba(0, 0, 0, 0.5);
   color: #fff;
 }
 
+/* Title */
 .register-title {
-  text-align: center;
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Inputs with animated focus effect */
+.MuiTextField-root {
+  border-radius: 8px !important;
+}
+
+.MuiOutlinedInput-root {
+  transition: all 0.3s ease-in-out;
+}
+
+.MuiOutlinedInput-root:hover {
+  transform: scale(1.02);
+}
+
+.MuiOutlinedInput-root:focus-within {
+  box-shadow: 0px 0px 10px rgba(0, 0, 255, 0.2);
+}
+
+/* Register Button (Same width and height for both buttons) */
+.register-btn, .google-btn {
+  width: 100%;
+  height: 50px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  padding: 12px;
+  transition: all 0.3s ease;
+}
+
+.register-btn {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
+}
+
+.register-btn:hover {
+  background: linear-gradient(135deg, #764ba2, #667eea);
+  transform: scale(1.05);
+}
+
+.google-btn {
+  border: 1px solid #ccc;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.google-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+}
+
+/* Theme Toggle */
+.theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.register-card {
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Style for input rows with two fields per row */
+.input-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
   margin-bottom: 20px;
 }
 
-.register-actions {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+.input-row .MuiTextField-root {
+  width: 48%;
 }
 
-button {
-  font-size: 16px;
+/* 1. Input fields text color for dark mode */
+.register-container.dark .MuiOutlinedInput-root input {
+  color: #fff;
 }
+
+/* 3. Box shadow for the form */
+/* .register-card {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+} */

@@ -65,10 +65,10 @@ const Footer = () => {
               <ul className="footer-links">
                 <li onClick={() => navigate("/blog")}>Blog</li>
                 <li onClick={() => navigate("/testimonial")}>Testimonials</li>
-                <li onClick={() => navigate("/review")}>Reviews</li>
                 <li onClick={() => navigate("/privacy")}>Privacy Policy</li>
                 <li onClick={() => navigate("/terms")}>Terms of Service</li>
                 <li onClick={() => navigate("/pricing")}>Pricing</li>
+                <li onClick={() => navigate("/contact")}>Contact Us</li>
                 <li onClick={() => navigate("/settings")}>Settings</li>
               </ul>
             </Col>

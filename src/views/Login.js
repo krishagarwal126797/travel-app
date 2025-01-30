@@ -46,7 +46,7 @@ const Login = () => {
         <div className="login-image">
           <div className="image-overlay">
             <div className="centered-text">
-              <span className="welcome-text">Welcome to Tourism</span>
+              <span className="welcome-text">Welcome to Travel Tinder</span>
             </div>
             <p className="lorem-text">
               Welcome to Tour – may your journey be safe. Log in to get started!
