@@ -88,6 +88,7 @@ const AdminLogin = () => {
   
 
   return (
+    <section className="Login">
     <div className="login-container">
       <div className="login-content">
         <div className="login-image">
@@ -155,6 +156,7 @@ const AdminLogin = () => {
       </div>
       <ToastContainer />
     </div>
+    </section>
   );
 };
 

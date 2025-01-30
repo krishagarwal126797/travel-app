@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { db, auth, provider } from "../firebase/firebase";
+import { db,auth,provider } from "../firebase/firebase";
 import { createUserWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 import { setDoc, doc } from "firebase/firestore";
 import { Card, CardContent, CardActions, Button, TextField, Typography, Switch } from "@mui/material";
@@ -22,6 +22,7 @@ const Register = () => {
     password: "",
     phoneNumber: "",
     city: "",
+    state: "", // New state field
   });
 
   const [theme, setTheme] = useState("light");
@@ -37,7 +38,7 @@ const Register = () => {
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      const { email, password, username, phoneNumber, city } = formData;
+      const { email, password, username, phoneNumber, city, state } = formData;
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       const user = userCredential.user;
       await setDoc(doc(db, "users", user.uid), {
@@ -46,6 +47,7 @@ const Register = () => {
         Password: password,
         Phone_number: Number(phoneNumber),
         City: city,
+        State: state, // Save new state field
       });
       alert("User registered successfully!");
     } catch (error) {
@@ -62,6 +64,7 @@ const Register = () => {
         Email: user.email,
         Phone_number: user.phoneNumber || "",
         City: "",
+        State: "", // Default empty for Google SignUp
       });
       alert("User registered with Google successfully!");
     } catch (error) {
@@ -122,6 +125,16 @@ const Register = () => {
             <TextField
               label="City"
               name="city"
+              variant="outlined"
+              fullWidth
+              margin="normal"
+              onChange={handleInputChange}
+              required
+            />
+            {/* New State Input Field */}
+            <TextField
+              label="State"
+              name="state"
               variant="outlined"
               fullWidth
               margin="normal"

@@ -1,46 +1,46 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { db } from '../../firebase/firebase';
+import { collection, getDocs, updateDoc, doc } from 'firebase/firestore';
 import './AdminTours.css';
 
 const AdminTours = () => {
-  const [tours, setTours] = useState([
-    {
-      id: 1,
-      tourName: 'Beach Adventure',
-      city: 'Miami',
-      startDate: '2025-01-10',
-      endDate: '2025-01-15',
-      status: 'Pending',
-      budget: '$1500',
-      vehiclePreference: 'SUV',
-    },
-    {
-      id: 2,
-      tourName: 'Mountain Escape',
-      city: 'Denver',
-      startDate: '2025-02-01',
-      endDate: '2025-02-05',
-      status: 'Approved',
-      budget: '$2000',
-      vehiclePreference: '4x4 Jeep',
-    },
-    {
-      id: 3,
-      tourName: 'City Lights Tour',
-      city: 'New York',
-      startDate: '2025-03-10',
-      endDate: '2025-03-12',
-      status: 'Pending',
-      budget: '$1200',
-      vehiclePreference: 'Sedan',
-    },
-  ]);
+  const [tours, setTours] = useState([]);
 
-  const updateTourStatus = (id, newStatus) => {
-    setTours((prevTours) =>
-      prevTours.map((tour) =>
-        tour.id === id ? { ...tour, status: newStatus } : tour
-      )
-    );
+  // Fetch all tours from Firestore
+  useEffect(() => {
+    const fetchTours = async () => {
+      try {
+        const querySnapshot = await getDocs(collection(db, 'Tours'));
+        const toursData = querySnapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+        setTours(toursData);
+      } catch (error) {
+        console.error('Error fetching tours:', error);
+      }
+    };
+
+    fetchTours();
+  }, []);
+
+  // Update approval status in Firestore
+  const updateApprovalStatus = async (id) => {
+    try {
+      const tourRef = doc(db, 'Tours', id);
+      await updateDoc(tourRef, {
+        approve: true, // Set approve to true
+      });
+
+      // Update the local state to reflect changes instantly
+      setTours((prevTours) =>
+        prevTours.map((tour) =>
+          tour.id === id ? { ...tour, approve: true } : tour
+        )
+      );
+    } catch (error) {
+      console.error('Error updating approval status:', error);
+    }
   };
 
   return (
@@ -50,41 +50,33 @@ const AdminTours = () => {
         <thead>
           <tr>
             <th>Tour Name</th>
-            <th>City</th>
+            <th>Destination</th>
             <th>Start Date</th>
-            <th>End Date</th>
-            <th>Status</th>
+            <th>Days</th>
             <th>Budget</th>
-            <th>Vehicle Preference</th>
+            <th>Travel Medium</th>
+            <th>Approval</th>
             <th>Actions</th>
           </tr>
         </thead>
         <tbody>
           {tours.map((tour) => (
             <tr key={tour.id}>
-              <td>{tour.tourName}</td>
-              <td>{tour.city}</td>
-              <td>{tour.startDate}</td>
-              <td>{tour.endDate}</td>
-              <td>{tour.status}</td>
-              <td>{tour.budget}</td>
-              <td>{tour.vehiclePreference}</td>
+              <td>{tour.Tour_name}</td>
+              <td>{tour.destination}</td>
+              <td>{tour.start_date.toDate().toLocaleDateString()}</td>
+              <td>{tour.number_of_days}</td>
+              <td>${tour.budget}</td>
+              <td>{tour.travel_medium}</td>
+              <td>{tour.approve ? 'Approved' : 'Pending'}</td>
               <td>
-                {tour.status === 'Pending' && (
-                  <>
-                    <button
-                      className="approve-btn"
-                      onClick={() => updateTourStatus(tour.id, 'Approved')}
-                    >
-                      Approve
-                    </button>
-                    <button
-                      className="disapprove-btn"
-                      onClick={() => updateTourStatus(tour.id, 'Disapproved')}
-                    >
-                      Disapprove
-                    </button>
-                  </>
+                {!tour.approve && (
+                  <button
+                    className="approve-btn"
+                    onClick={() => updateApprovalStatus(tour.id)}
+                  >
+                    Approve
+                  </button>
                 )}
               </td>
             </tr>

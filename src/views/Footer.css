@@ -96,7 +96,9 @@
   .social-links a:hover {
     color: #4866F5;
   }
-
+.social-links .social-icon{
+  padding: 3px;
+}
   /* Footer Bottom */
   .footer-bottom p {
     margin: 0;
