@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { FaBars, FaHome, FaLock, FaMoneyBill, FaUser } from "react-icons/fa";
+import { FaBars, FaChevronRight, FaChevronLeft, FaHome, FaLock, FaMoneyBill, FaUser } from "react-icons/fa";
 import { MdMessage } from "react-icons/md";
 import { BiAnalyse, BiSearch, BiCog } from "react-icons/bi";
 import { AiFillHeart, AiTwotoneFileExclamation } from "react-icons/ai";
@@ -14,16 +14,16 @@ const routes = [
   { path: "/messages", name: "Messages", icon: <MdMessage /> },
   { path: "/analytics", name: "Analytics", icon: <BiAnalyse /> },
   { path: "/order", name: "Order", icon: <BsCartCheck /> },
-  {
-    path: "/file-manager",
-    name: "File Manager",
-    icon: <AiTwotoneFileExclamation />,
-    subRoutes: [
-      { path: "/file-manager/profile", name: "Profile", icon: <FaUser /> },
-      { path: "/file-manager/2fa", name: "2FA", icon: <FaLock /> },
-      { path: "/file-manager/billing", name: "Billing", icon: <FaMoneyBill /> },
-    ],
-  },
+  // {
+  //   path: "/file-manager",
+  //   name: "File Manager",
+  //   icon: <AiTwotoneFileExclamation />,
+  //   subRoutes: [
+  //     { path: "/file-manager/profile", name: "Profile", icon: <FaUser /> },
+  //     { path: "/file-manager/2fa", name: "2FA", icon: <FaLock /> },
+  //     { path: "/file-manager/billing", name: "Billing", icon: <FaMoneyBill /> },
+  //   ],
+  // },
   {
     path: "/settings",
     name: "Settings",
@@ -39,79 +39,42 @@ const routes = [
 
 const SideBar = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [activeMenu, setActiveMenu] = useState(null); // For toggling submenus
+  const [activeMenu, setActiveMenu] = useState(null);
 
-  const toggle = () => setIsOpen(!isOpen);
-
-  const inputAnimation = {
-    hidden: { width: 0, padding: 0, opacity: 0, transition: { duration: 0.2 } },
-    show: { width: "140px", padding: "5px 15px", opacity: 1, transition: { duration: 0.2 } },
-  };
-
-  const showAnimation = {
-    hidden: { height: 0, opacity: 0, transition: { duration: 0.3 } },
-    show: { height: "auto", opacity: 1, transition: { duration: 0.3 } },
-  };
-
-  const handleSubmenuToggle = (menuName) => {
-    setActiveMenu(activeMenu === menuName ? null : menuName);
-  };
+  const toggleSidebar = () => setIsOpen(!isOpen);
 
   return (
     <section className="sidebar_container">
-    <div className="main-container">
-      <motion.div
-        animate={{ width: isOpen ? "200px" : "50px" }}
-        className="sidebar"
-      >
+      <motion.div className={`sidebar ${isOpen ? "expanded" : ""}`}>
         <div className="top_section">
-          {isOpen && <motion.h1 className="logo">YourLogo</motion.h1>}
-          <FaBars className="bars" onClick={toggle} />
+          <div className="toggle-btn" onClick={toggleSidebar}>
+            {isOpen ? <FaChevronLeft /> : <FaChevronRight />}
+          </div>
+          {isOpen && <h4 className="logo">Travel Tinder</h4>}
         </div>
+
         <div className="search">
           <BiSearch className="search_icon" />
-          <AnimatePresence>
-            {isOpen && (
-              <motion.input
-                variants={inputAnimation}
-                initial="hidden"
-                animate="show"
-                exit="hidden"
-                placeholder="Search..."
-              />
-            )}
-          </AnimatePresence>
+          {isOpen && <input type="text" placeholder="Search..." />}
         </div>
+
         <section className="routes">
           {routes.map((route, index) => (
             <div key={index}>
-              <div
-                className="link menu"
-                onClick={() => route.subRoutes && handleSubmenuToggle(route.name)}
-              >
+              <div className="link menu" onClick={() => route.subRoutes && setActiveMenu(activeMenu === route.name ? null : route.name)}>
                 <div className="icon">{route.icon}</div>
-                {isOpen && <div className="link_text">{route.name}</div>}
+                {isOpen && <span className="link_text">{route.name}</span>}
                 {route.subRoutes && isOpen && (
                   <span className={`arrow ${activeMenu === route.name ? "open" : ""}`}>▼</span>
                 )}
               </div>
+
               {route.subRoutes && activeMenu === route.name && (
-                <motion.div
-                  className="menu_container"
-                  variants={showAnimation}
-                  initial="hidden"
-                  animate="show"
-                  exit="hidden"
-                >
+                <motion.div className="menu_container">
                   {route.subRoutes.map((subRoute, subIndex) => (
-                    <NavLink
-                      to={subRoute.path}
-                      key={subIndex}
-                      className="link"
-                      activeClassName="active"
-                    >
+                    <NavLink to={subRoute.path} key={subIndex} className="link">
                       <div className="icon">{subRoute.icon}</div>
-                      {isOpen && <div className="link_text">{subRoute.name}</div>}
+                      {isOpen && <span className="link_text">{subRoute.name}</span>}
                     </NavLink>
                   ))}
                 </motion.div>
@@ -121,7 +84,6 @@ const SideBar = ({ children }) => {
         </section>
       </motion.div>
       <main>{children}</main>
-    </div>
     </section>
   );
 };

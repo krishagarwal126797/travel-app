@@ -26,8 +26,8 @@ import AdminLogin from './views/AdminLogin';
 import BlogPostPage from './views/blog/blogpost';
 import HowItWorks from './views/How_itsWorking/itsWorking';
 import CreateBlog from './views/blog/createblog';
-import about from './views/blog/createblog';
 import AboutUs from './views/about/about';
+import ChatApp from './chat/chat';
 // Check if user is authenticated
 const isAuthenticated = () => {
   const user = localStorage.getItem('user');
@@ -74,6 +74,7 @@ const routes = [
   { path: '/blogpost', component: BlogPostPage },
   { path: '/blogcreate', component: CreateBlog },
   { path: '/about', component: AboutUs },
+  { path: '/chat', component: ChatApp},
 ];
 
 export default routes;

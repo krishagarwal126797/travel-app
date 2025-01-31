@@ -8,9 +8,9 @@ import { useNavigate } from "react-router-dom";
 const PopularDestinations = () => {
    const navigate = useNavigate();
   const destinations = [
-    { id: 1, name: "Rialto Bridge", img: "/assets/img/h01.jpg", location: "VENICE, ITALY", price: "$299", rating: 4.9, reviews: "1.7k Reviews" },
-    { id: 2, name: "Mountain Hike", img: "/assets/img/h02.jpg", location: "SWISS ALPS", price: "$499", rating: 4.8, reviews: "2.1k Reviews" },
-    { id: 3, name: "City Tours", img: "/assets/img/h03.jpg", location: "NEW YORK, USA", price: "$199", rating: 4.7, reviews: "3.5k Reviews" },
+    { id: 1, name: "Tajmahal", img: "/assets/img/h04.jpg", location: "Agra, Uttar Pradesh", price: "1000", rating: 4.9, reviews: "1.7k Reviews" },
+    { id: 2, name: "Mahakaleshwar", img: "/assets/img/chinesetemple.jpg", location: "Ujjain, M.P", price: "3000", rating: 4.8, reviews: "2.1k Reviews" },
+    { id: 3, name: "Delhi City Tours", img: "/assets/img/h13.jpg", location: "Delhi, India", price: "4000", rating: 4.7, reviews: "3.5k Reviews" },
   ];
 
   const chunkSize = 3;

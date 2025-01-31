@@ -9,6 +9,12 @@ import { useNavigate } from "react-router-dom";
 const Footer = () => {
   const navigate = useNavigate(); // Hook for navigation
 
+  // Function to navigate and scroll to top
+  const handleNavigation = (path) => {
+    navigate(path);
+    window.scrollTo(0, 0);
+  };
+
   return (
     <section className="footer">
       <footer className="custom-footer">
@@ -50,12 +56,12 @@ const Footer = () => {
             <Col md={3} className="mb-4">
               <h5 className="footer-heading">Service</h5>
               <ul className="footer-links">
-                <li onClick={() => navigate("/createtour")}>Create Tour</li>
-                <li onClick={() => navigate("/tourlist")}>Tour List</li>
-                <li onClick={() => navigate("/mytour")}>My Tour</li>
-                <li onClick={() => navigate("/destination")}>Destination</li>
-                <li onClick={() => navigate("/tourdetails")}>Tour Details</li>
-                <li onClick={() => navigate("/SaveDestination")}>Save Destination</li>
+                <li onClick={() => handleNavigation("/createtour")}>Create Tour</li>
+                <li onClick={() => handleNavigation("/tourlist")}>Tour List</li>
+                <li onClick={() => handleNavigation("/mytour")}>My Tour</li>
+                <li onClick={() => handleNavigation("/destination")}>Destination</li>
+                <li onClick={() => handleNavigation("/tourdetails")}>Tour Details</li>
+                <li onClick={() => handleNavigation("/SaveDestination")}>Save Destination</li>
               </ul>
             </Col>
 
@@ -63,13 +69,13 @@ const Footer = () => {
             <Col md={3} className="mb-4">
               <h5 className="footer-heading">Resources</h5>
               <ul className="footer-links">
-                <li onClick={() => navigate("/blog")}>Blog</li>
-                <li onClick={() => navigate("/testimonial")}>Testimonials</li>
-                <li onClick={() => navigate("/privacy")}>Privacy Policy</li>
-                <li onClick={() => navigate("/terms")}>Terms of Service</li>
-                <li onClick={() => navigate("/pricing")}>Pricing</li>
-                <li onClick={() => navigate("/contact")}>Contact Us</li>
-                <li onClick={() => navigate("/settings")}>Settings</li>
+                <li onClick={() => handleNavigation("/blog")}>Blog</li>
+                <li onClick={() => handleNavigation("/testimonial")}>Testimonials</li>
+                <li onClick={() => handleNavigation("/privacy")}>Privacy Policy</li>
+                <li onClick={() => handleNavigation("/terms")}>Terms of Service</li>
+                <li onClick={() => handleNavigation("/pricing")}>Pricing</li>
+                <li onClick={() => handleNavigation("/contact")}>Contact Us</li>
+                <li onClick={() => handleNavigation("/settings")}>Settings</li>
               </ul>
             </Col>
 
@@ -86,10 +92,10 @@ const Footer = () => {
                   +91 (789) 559 - 1694
                 </li>
                 <li className="social-links">
-                  <span className="social-icon" onClick={() => navigate("/facebook")}>
+                  <span className="social-icon" onClick={() => handleNavigation("/facebook")}>
                     <FontAwesomeIcon icon={faFacebook} />
                   </span>
-                  <span className="social-icon" onClick={() => navigate("/twitter")}>
+                  <span className="social-icon" onClick={() => handleNavigation("/twitter")}>
                     <FontAwesomeIcon icon={faTwitter} />
                   </span>
                   <a

@@ -249,5 +249,7 @@
   
   .cta-form .btn-primary {
     align-self: flex-start;
+    color: green;
+    background-color: red;
   }
 }

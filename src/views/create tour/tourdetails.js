@@ -129,6 +129,11 @@ const TourDetailsPage = () => {
         </div>
         {/* Add more locations as needed */}
       </section>
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', }}>
+  <button style={{ backgroundColor: "#175765", borderRadius: "10px", width: "100px",color:"white" }}  onClick={() => navigate("/chat")}>
+    Join Tour
+  </button>
+</div>
 
       {/* Testimonial Section */}
       <section className="tour-testimonials">
@@ -159,7 +164,7 @@ const TourDetailsPage = () => {
       </section>
 
       {/* CTA Form Section */}
-      <section className="cta-form">
+      {/* <section className="cta-form">
         <h2>Have Questions?</h2>
         <form>
           <input type="text" placeholder="Your Name" required />
@@ -167,7 +172,7 @@ const TourDetailsPage = () => {
           <textarea placeholder="Your Message" required></textarea>
           <button type="submit" className="btn-primary">Submit</button>
         </form>
-      </section>
+      </section> */}
     </div>
     </section>
     <Footer />

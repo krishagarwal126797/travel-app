@@ -48,24 +48,12 @@ const NavbarComp = () => {
                 <FaInfoCircle className="icon" />
                 About Us
               </Button>
-              <div className="nav-btn-container">
-                <div className="nav-btn">
-                  <FaMapMarkerAlt className="icon me-2" />
-                  Toures
-                  <FaCaretDown
-                    className="dropdown-icon ms-2"
-                    onClick={toggle}
-                    style={{ cursor: "pointer" }}
-                  />
-                </div>
-                <Dropdown isOpen={dropdownOpen} toggle={toggle} className="dropdown">
-                  <DropdownMenu>
-                    <DropdownItem onClick={() => navigate("/mytour")}>Our Tour</DropdownItem>
-                    <DropdownItem onClick={() => navigate("/team")}>Team</DropdownItem>
-                    <DropdownItem onClick={() => navigate("/careers")}>Careers</DropdownItem>
-                  </DropdownMenu>
-                </Dropdown>
-              </div>
+              <Button className="nav-btn" onClick={() => navigate("/blogpost")}>
+                Blogs
+              </Button>
+              <Button className="nav-btn" onClick={() => navigate("/tourlist")}>
+                Tours
+              </Button>
             </Nav>
 
             {/* Dark Mode Toggle */}

@@ -1,10 +1,11 @@
-.sidebar_container{
-.main-container {
+/* Sidebar Container */
+.sidebar_container {
   display: flex;
   width: 100%;
   font-family: "Arial", sans-serif;
 }
 
+/* Sidebar */
 .sidebar {
   background: #2c3e50;
   color: white;
@@ -13,16 +14,16 @@
   top: 0;
   display: flex;
   flex-direction: column;
-  width: 80px;
+  width: 60px;
   transition: width 0.3s ease-in-out;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
   overflow: hidden;
 }
 
-.sidebar:hover {
-  width: 200px;
+.sidebar.expanded {
+  width: 220px;
 }
 
+/* Sidebar Header */
 .top_section {
   display: flex;
   align-items: center;
@@ -31,31 +32,24 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.logo {
-  font-size: 22px;
-  font-weight: bold;
-  display: none;
-  transition: opacity 0.3s ease-in-out;
-}
-
-.sidebar:hover .logo {
-  /* display: block; */
-  opacity: 1;
-}
-
-.bars {
+.toggle-btn {
   cursor: pointer;
   font-size: 20px;
+  transition: transform 0.3s ease-in-out;
 }
 
+.toggle-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Search Bar */
 .search {
   display: flex;
   align-items: center;
   padding: 10px;
-  margin-top: 10px;
   background-color: #34495e;
   border-radius: 4px;
-  margin: 0 10px;
+  margin: 10px;
 }
 
 .search_icon {
@@ -74,62 +68,71 @@
   transition: width 0.3s ease-in-out;
 }
 
-.sidebar:hover .search input {
+.sidebar.expanded .search input {
   width: 140px;
 }
 
+/* Routes */
 .routes {
   flex-grow: 1;
   margin-top: 10px;
 }
 
+/* Sidebar Links */
 .link {
   text-decoration: none;
   display: flex;
   align-items: center;
-  padding: 10px 15px;
+  padding: 12px 15px;
   color: white;
-  font-size: 14px;
+  font-size: 16px;
   border-radius: 4px;
   transition: background 0.3s, padding-left 0.3s;
   margin: 5px 10px;
+  cursor: pointer;
 }
 
 .link:hover {
   background: #1abc9c;
-  /* padding-left: 20px; */
 }
 
 .link .icon {
-  font-size: 18px;
+  font-size: 20px;
   margin-right: 10px;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.9);
 }
 
+/* Link Text */
 .link_text {
-  display: inline-block;
   transition: opacity 0.3s ease-in-out;
 }
 
-.sidebar:hover .link_text {
-  display: inline-block;
-  opacity: 1;
+.sidebar:not(.expanded) .link_text {
+  display: none;
 }
 
+/* Active Link */
 .active {
   background: #16a085;
   font-weight: bold;
 }
 
+/* Menu Subroutes */
 .menu {
-  cursor: pointer;
-  padding: 10px 15px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .menu_container {
-  padding-left: 30px;
+  padding-left: 20px;
 }
+
+.arrow {
+  font-size: 14px;
+  transition: transform 0.3s;
+}
+
+.arrow.open {
+  transform: rotate(180deg);
 }
