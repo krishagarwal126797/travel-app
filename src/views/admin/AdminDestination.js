@@ -3,31 +3,83 @@ import { Table, Button, Form, Modal } from "react-bootstrap";
 
 const AdminDestination = () => {
   const [destinations, setDestinations] = useState([]);
-  const [formData, setFormData] = useState({ name: "", description: "" });
+  const [formData, setFormData] = useState({
+    title: "",
+    image: "",
+    description: "",
+    locations: [],
+  });
+
+  const [locationData, setLocationData] = useState({
+    title: "",
+    image: "",
+    description: "",
+  });
+
   const [showEditModal, setShowEditModal] = useState(false);
   const [currentDestination, setCurrentDestination] = useState(null);
 
-  // Handle input changes
+  // Handle input changes for the main destination form
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  // Handle image upload for the main destination
+  const handleImageUpload = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      setFormData({ ...formData, image: URL.createObjectURL(file) });
+    }
+  };
+
+  // Handle input changes for the location fields
+  const handleLocationChange = (e) => {
+    setLocationData({ ...locationData, [e.target.name]: e.target.value });
+  };
+
+  // Handle image upload for locations
+  const handleLocationImageUpload = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      setLocationData({ ...locationData, image: URL.createObjectURL(file) });
+    }
+  };
+
+  // Add a new location inside the destination
+  const handleAddLocation = () => {
+    if (locationData.title && locationData.description) {
+      setFormData({
+        ...formData,
+        locations: [...formData.locations, { ...locationData, id: Date.now() }],
+      });
+      setLocationData({ title: "", image: "", description: "" });
+    }
+  };
+
+  // Remove a location from the destination
+  const handleRemoveLocation = (id) => {
+    setFormData({
+      ...formData,
+      locations: formData.locations.filter((loc) => loc.id !== id),
+    });
   };
 
   // Add a new destination
   const handleAddDestination = (e) => {
     e.preventDefault();
-    if (formData.name && formData.description) {
+    if (formData.title && formData.description && formData.image) {
       setDestinations([
         ...destinations,
-        { id: Date.now(), name: formData.name, description: formData.description },
+        { id: Date.now(), ...formData },
       ]);
-      setFormData({ name: "", description: "" });
+      setFormData({ title: "", image: "", description: "", locations: [] });
     }
   };
 
   // Open edit modal
   const handleEdit = (destination) => {
     setCurrentDestination(destination);
-    setFormData({ name: destination.name, description: destination.description });
+    setFormData({ ...destination });
     setShowEditModal(true);
   };
 
@@ -40,7 +92,7 @@ const AdminDestination = () => {
     );
     setShowEditModal(false);
     setCurrentDestination(null);
-    setFormData({ name: "", description: "" });
+    setFormData({ title: "", image: "", description: "", locations: [] });
   };
 
   // Delete a destination
@@ -55,16 +107,35 @@ const AdminDestination = () => {
       {/* Add Destination Form */}
       <Form onSubmit={handleAddDestination} className="mb-4">
         <Form.Group className="mb-3">
-          <Form.Label>Destination Name</Form.Label>
+          <Form.Label>Destination Title</Form.Label>
           <Form.Control
             type="text"
-            name="name"
-            value={formData.name}
+            name="title"
+            value={formData.title}
             onChange={handleChange}
-            placeholder="Enter destination name"
+            placeholder="Enter destination title"
             required
           />
         </Form.Group>
+
+        <Form.Group className="mb-3">
+          <Form.Label>Destination Image</Form.Label>
+          <Form.Control
+            type="file"
+            onChange={handleImageUpload}
+            accept="image/*"
+            required
+          />
+          {formData.image && (
+            <img
+              src={formData.image}
+              alt="Destination Preview"
+              className="mt-2"
+              width="150"
+            />
+          )}
+        </Form.Group>
+
         <Form.Group className="mb-3">
           <Form.Label>Destination Description</Form.Label>
           <Form.Control
@@ -77,7 +148,65 @@ const AdminDestination = () => {
             required
           />
         </Form.Group>
-        <Button variant="primary" type="submit">
+
+        {/* Add Locations Section */}
+        <h5>Add Locations</h5>
+        <Form.Group className="mb-3">
+          <Form.Label>Location Title</Form.Label>
+          <Form.Control
+            type="text"
+            name="title"
+            value={locationData.title}
+            onChange={handleLocationChange}
+            placeholder="Enter location title"
+          />
+        </Form.Group>
+
+        <Form.Group className="mb-3">
+          <Form.Label>Location Image</Form.Label>
+          <Form.Control
+            type="file"
+            onChange={handleLocationImageUpload}
+            accept="image/*"
+          />
+          {locationData.image && (
+            <img
+              src={locationData.image}
+              alt="Location Preview"
+              className="mt-2"
+              width="100"
+            />
+          )}
+        </Form.Group>
+
+        <Form.Group className="mb-3">
+          <Form.Label>Location Description</Form.Label>
+          <Form.Control
+            as="textarea"
+            name="description"
+            value={locationData.description}
+            onChange={handleLocationChange}
+            placeholder="Enter location description"
+            rows={2}
+          />
+        </Form.Group>
+
+        <Button variant="secondary" onClick={handleAddLocation} className="mb-3">
+          Add Location
+        </Button>
+
+        <ul className="list-group">
+          {formData.locations.map((location) => (
+            <li key={location.id} className="list-group-item d-flex justify-content-between align-items-center">
+              {location.title} 
+              <Button variant="danger" size="sm" onClick={() => handleRemoveLocation(location.id)}>
+                Remove
+              </Button>
+            </li>
+          ))}
+        </ul>
+
+        <Button variant="primary" type="submit" className="mt-3">
           Add Destination
         </Button>
       </Form>
@@ -87,8 +216,10 @@ const AdminDestination = () => {
         <thead>
           <tr>
             <th>#</th>
-            <th>Name</th>
+            <th>Title</th>
+            <th>Image</th>
             <th>Description</th>
+            <th>Locations</th>
             <th>Actions</th>
           </tr>
         </thead>
@@ -96,22 +227,23 @@ const AdminDestination = () => {
           {destinations.map((destination, index) => (
             <tr key={destination.id}>
               <td>{index + 1}</td>
-              <td>{destination.name}</td>
+              <td>{destination.title}</td>
+              <td>
+                <img src={destination.image} alt="Destination" width="100" />
+              </td>
               <td>{destination.description}</td>
               <td>
-                <Button
-                  variant="warning"
-                  size="sm"
-                  className="me-2"
-                  onClick={() => handleEdit(destination)}
-                >
+                <ul>
+                  {destination.locations.map((loc) => (
+                    <li key={loc.id}>{loc.title}</li>
+                  ))}
+                </ul>
+              </td>
+              <td>
+                <Button variant="warning" size="sm" onClick={() => handleEdit(destination)}>
                   Edit
-                </Button>
-                <Button
-                  variant="danger"
-                  size="sm"
-                  onClick={() => handleDelete(destination.id)}
-                >
+                </Button>{" "}
+                <Button variant="danger" size="sm" onClick={() => handleDelete(destination.id)}>
                   Delete
                 </Button>
               </td>
@@ -119,46 +251,6 @@ const AdminDestination = () => {
           ))}
         </tbody>
       </Table>
-
-      {/* Edit Destination Modal */}
-      <Modal show={showEditModal} onHide={() => setShowEditModal(false)}>
-        <Modal.Header closeButton>
-          <Modal.Title>Edit Destination</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <Form>
-            <Form.Group className="mb-3">
-              <Form.Label>Destination Name</Form.Label>
-              <Form.Control
-                type="text"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                placeholder="Enter destination name"
-              />
-            </Form.Group>
-            <Form.Group className="mb-3">
-              <Form.Label>Destination Description</Form.Label>
-              <Form.Control
-                as="textarea"
-                name="description"
-                value={formData.description}
-                onChange={handleChange}
-                placeholder="Enter destination description"
-                rows={3}
-              />
-            </Form.Group>
-          </Form>
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={() => setShowEditModal(false)}>
-            Cancel
-          </Button>
-          <Button variant="primary" onClick={handleUpdateDestination}>
-            Save Changes
-          </Button>
-        </Modal.Footer>
-      </Modal>
     </div>
   );
 };
