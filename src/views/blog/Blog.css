@@ -16,8 +16,7 @@ body {
 header {
   text-align: center;
   padding: 50px 10px;
-  background-color: #f9f9f9;
-  background-image: url(/public/assets/img/h10.jpg);
+  background-color: green;
 }
 
 header .animate-text {
@@ -49,7 +48,7 @@ header .animate-text {
   border: 1px solid #ccc;
   border-radius: 10px;
   overflow: hidden;
-  background-color: #fff;
+  background-color: #ccc;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -90,7 +89,7 @@ header .animate-text {
   border: 1px solid #ccc;
   border-radius: 10px;
   overflow: hidden;
-  background-color: #fff;
+  background-color: #ccc;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -117,7 +116,7 @@ header .animate-text {
 #newsletter {
   padding: 20px;
   text-align: center;
-  background-color: #f4f4f4;
+  /* background-color: #f4f4f4; */
 }
 
 #newsletter form {

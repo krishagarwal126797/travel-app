@@ -1,0 +1,88 @@
+/* Global CSS File */
+
+/* Light Mode Styles */
+body.light-mode {
+  background-color: #f9f9f9;
+  color: #000;
+  transition: all 0.3s ease;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #222222;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+/* Navbar Styling */
+.custom-navbar {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 10px 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.navbar-dark {
+  background: rgba(34, 34, 34, 0.9);
+  color: #fff;
+}
+
+.navbar-light {
+  color: #000;
+}
+
+/* Brand Name Styles */
+.brandname-dark {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fcf8f8;
+}
+
+.brandname-light {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #121212;
+}
+
+/* Navigation Buttons */
+.nav-buttons .nav-btn {
+  border-radius: 25px;
+  margin-right: 10px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  padding: 5px 15px;
+}
+
+.navbuttons-light .nav-btn {
+  border: 1px solid #000;
+  background-color: transparent;
+  color: black;
+}
+
+.navbuttons-light .nav-btn:hover {
+  background-color: rgb(246, 246, 246);
+  animation: zoomIn 0.3s ease forwards;
+  color: #121212;
+}
+
+.navbuttons-dark .nav-btn {
+  border: 1px solid #fff;
+  background-color: transparent;
+  color: white;
+}
+
+.hero-description {
+  color: #fff;
+}
+
+/* Zoom-In Animation Keyframes */
+@keyframes zoomIn {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}

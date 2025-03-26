@@ -6,6 +6,7 @@ import FeaturedTours from './home_componant/FeaturedTours';
 import HowItWorks from './home_componant/howitworks';
 import Testimonials from './home_componant/testonomial';
 import Footer from './footer';
+import './darkmode.css';
 
 const Home = () => {
   return (

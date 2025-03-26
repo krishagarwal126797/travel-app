@@ -1,28 +1,33 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Navbar, Nav, Button, Container } from "react-bootstrap";
-import { FaPlay, FaTag, FaInfoCircle, FaMoon, FaSun, FaHome, FaCaretDown, FaMapMarkerAlt } from "react-icons/fa";
-import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from "reactstrap";
+import { FaMoon, FaSun, FaHome, FaInfoCircle } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import "./Navbar.css";
 
 const NavbarComp = () => {
-  const [darkMode, setDarkMode] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
-  const navigate = useNavigate(); // Hook for navigation
+  const [darkMode, setDarkMode] = useState(
+    localStorage.getItem("darkMode") === "true" // Page refresh hone par yaad rahe
+  );
 
-  const toggle = () => setDropdownOpen(!dropdownOpen);
+  const navigate = useNavigate(); 
+
+  useEffect(() => {
+    if (darkMode) {
+      document.body.classList.add("dark-mode");
+      localStorage.setItem("darkMode", "true");
+    } else {
+      document.body.classList.remove("dark-mode");
+      localStorage.setItem("darkMode", "false");
+    }
+  }, [darkMode]); // Jab bhi darkMode change ho, effect apply ho
 
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
-    document.body.className = darkMode ? "light-mode" : "dark-mode";
   };
 
   return (
     <section className="NavbarComp">
-      <Navbar
-        expand="lg"
-        className={`custom-navbar ${darkMode ? "navbar-dark" : "navbar-light"}`}
-      >
+      <Navbar expand="lg" className={`custom-navbar ${darkMode ? "navbar-dark" : "navbar-light"}`}>
         <Container>
           {/* Logo Section */}
           <Navbar.Brand className="brand-section" onClick={() => navigate("/")}>
@@ -41,12 +46,10 @@ const NavbarComp = () => {
           <Navbar.Collapse id="navbar-nav" className="justify-content-end">
             <Nav className={`nav-buttons ${darkMode ? "navbuttons-dark" : "navbuttons-light"}`}>
               <Button className="nav-btn" onClick={() => navigate("/")}>
-                <FaHome className="icon" />
-                Home
+                <FaHome className="icon" /> Home
               </Button>
               <Button className="nav-btn" onClick={() => navigate("/about")}>
-                <FaInfoCircle className="icon" />
-                About Us
+                <FaInfoCircle className="icon" /> About Us
               </Button>
               <Button className="nav-btn" onClick={() => navigate("/blogpost")}>
                 Blogs
@@ -57,30 +60,18 @@ const NavbarComp = () => {
             </Nav>
 
             {/* Dark Mode Toggle */}
-            <Button
-              onClick={toggleDarkMode}
-              className="dark-mode-toggle ms-3"
-              variant={darkMode ? "light" : "dark"}
-            >
+            <Button onClick={toggleDarkMode} className="dark-mode-toggle ms-3">
               {darkMode ? <FaSun /> : <FaMoon />}
             </Button>
 
-            {/* Login Button */}
+            {/* Login & Signup Buttons */}
             <Nav>
-              <Button
-                variant="dark"
-                className="login-btn"
-                onClick={() => navigate("/login")}
-              >
+              <Button variant="dark" className="login-btn" onClick={() => navigate("/login")}>
                 Login
               </Button>
             </Nav>
             <Nav>
-              <Button
-                variant="dark"
-                className="signup-btn"
-                onClick={() => navigate("/register")}
-              >
+              <Button variant="dark" className="signup-btn" onClick={() => navigate("/register")}>
                 Sign up
               </Button>
             </Nav>
