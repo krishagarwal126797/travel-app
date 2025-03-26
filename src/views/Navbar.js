@@ -6,10 +6,10 @@ import "./Navbar.css";
 
 const NavbarComp = () => {
   const [darkMode, setDarkMode] = useState(
-    localStorage.getItem("darkMode") === "true" // Page refresh hone par yaad rahe
+    localStorage.getItem("darkMode") === "true"
   );
 
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (darkMode) {
@@ -19,11 +19,27 @@ const NavbarComp = () => {
       document.body.classList.remove("dark-mode");
       localStorage.setItem("darkMode", "false");
     }
-  }, [darkMode]); // Jab bhi darkMode change ho, effect apply ho
+  }, [darkMode]);
 
+  // Function to toggle dark mode
   const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
+    setDarkMode((prevMode) => !prevMode);
   };
+
+  // Listen for "Ctrl + D" or "Shift + D" keypress to toggle dark mode
+  useEffect(() => {
+    const handleKeyPress = (event) => {
+      if ((event.ctrlKey || event.shiftKey) && event.key.toLowerCase() === "d") {
+        event.preventDefault(); // Prevent default action (if any)
+        toggleDarkMode();
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyPress);
+    return () => {
+      document.removeEventListener("keydown", handleKeyPress);
+    };
+  }, []);
 
   return (
     <section className="NavbarComp">

@@ -45,7 +45,7 @@
 
 .form-section {
   flex: 1;
-  background-color: #D0DDD0;
+  /* background-color: #D0DDD0; */
   padding: 2rem;
   border-radius: 10px; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -161,7 +161,7 @@
 .features-section {
   
   padding: 2rem;
-  background-color: #fff;
+  /* background-color: #fff; */
   text-align: center;
 }
 .features-section h2{
@@ -173,10 +173,11 @@
   justify-content: center;
 }
 .feature {
-  background-color: #D0DDD0;
+  background-color: #D0DDD0; 
   padding: 1rem;
   border-radius: 10px;
   transition: transform 0.3s;
+  color: black;
 }
 .feature:hover {
   border: 1px solid black;
