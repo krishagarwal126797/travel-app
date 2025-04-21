@@ -4,6 +4,8 @@ import AdminTours from './views/admin/AdminTours';
 import AdminDestination from './views/admin/AdminDestination';
 import AdminCustomer from './views/admin/AdminCustomer';
 import AdminPartner from './views/admin/AdminPartner';
+import ProfitLoss from './views/admin/profitloss'; // Correct the import name
+
 const adminRoutes = [
   {
     path: '/admin',
@@ -14,8 +16,8 @@ const adminRoutes = [
       { path: 'tours', element: <AdminTours/> },
       { path: 'customers', element: <AdminCustomer/> },
       { path: 'partners', element: <AdminPartner/>},
-      { path: 'profitloss', element: <div>Profit/Loss Page</div> },
-      { path: 'destinations', element:<AdminDestination/> },
+      { path: 'profitloss', element: <ProfitLoss /> }, // Correct the usage here
+      { path: 'destinations', element: <AdminDestination/> },
     ],
   },
 ];

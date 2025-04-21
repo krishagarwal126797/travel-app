@@ -1,0 +1,111 @@
+/* Container styling */
+#profit-loss-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+#profit-loss-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+/* Input field styling */
+#profit-loss-form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: 0.3s ease;
+}
+
+#profit-loss-form input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Submit button styling */
+#profit-loss-form button {
+  grid-column: span 2;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+#profit-loss-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Table styling */
+#profit-loss-table {
+  width: 90%;
+  margin: 30px auto;
+  border-collapse: collapse;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+#profit-loss-table th,
+#profit-loss-table td {
+  border: 1px solid #ccc;
+  padding: 12px;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+#profit-loss-table th {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Action buttons styling */
+.action-btn {
+  margin: 0 4px;
+  padding: 6px 10px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.action-btn.add {
+  background-color: #28a745;
+  color: white;
+}
+
+.action-btn.add:hover {
+  background-color: #218838;
+}
+
+.action-btn.delete {
+  background-color: #dc3545;
+  color: white;
+}
+
+.action-btn.delete:hover {
+  background-color: #c82333;
+}
+
+.action-btn.print {
+  background-color: #ffc107;
+  color: black;
+}
+
+.action-btn.print:hover {
+  background-color: #e0a800;
+}
